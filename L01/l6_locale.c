@@ -12,3 +12,12 @@ int main ()
     setlocale (LC_ALL,"Ukrainain");
     printf ("наша валюта: %s\n-\n",lc->currency_symbol);
 }
+
+/*
+Locale is: C
+Currency symbol is: гр
+-
+наша валюта: гр
+-
+
+*/
