@@ -6,7 +6,7 @@ int main () {
    ptr = var; /* візьмемо адресу першого елементу масиву */
    i = 0;
    while ( ptr <= &var[MAX - 1] ) {
-  printf("Address of var[%d] = %x\n", i, ptr );
+  printf("Address of var[%d] = %p\n", i, ptr );
   printf("Value of var[%d] = %d\n", i, *ptr );
   ptr++;
    i++;

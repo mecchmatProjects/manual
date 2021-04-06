@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void op (int x, int y){
-printf(“\nПросто виводимо щось %d %d!\n”, x, y);
+printf("\nПросто виводимо щось %d %d!\n", x, y);
 return; // цей оператор можна просто не писати
 }
 
@@ -10,9 +10,9 @@ float cube(float d){
 }
 
 void f(){};
-void f(void){};
-void f(){ return void;}
-void f(void) {return;}
+//void f(void){};
+//void f(){ return void;}
+//void f(void) {return;}
 
 
 void main(){

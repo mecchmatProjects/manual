@@ -10,8 +10,6 @@ int main()
 {
   int ret;
   // inline function call
-    ret = foo();
-
-    printf("Output is: %d\n", ret);
-    return 0;
+ret=foo();
+printf("Output is: %d\n", ret);
 }

@@ -3,8 +3,10 @@
 int main(){
  float C=1.231;
  float x,y;
- printf("\nx="); scanf_s(“%f”,&x);
- printf("\ny="); scanf_s(“%f”,&x);
+ printf("\nx="); 
+ scanf("%f",&x);
+ printf("\ny=");
+ scanf("%f",&x);
  double A;
  if(x<=y){
                  A=x*y-C*y*sqrt(y);
@@ -13,7 +15,8 @@ int main(){
            A=cos(x)+log(y);
  }
  printf("A=%lf\n", A);
- printf("\nx="); scanf_s(“%f”,&x);
+ printf("\nx="); 
+ scanf("%f",&x);
  if(x<=y){A=x*y-C*y*sqrt(y);}
 else{A=cos(x)+log(y);}
  printf("A=%lf\n", A);

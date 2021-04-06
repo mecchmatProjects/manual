@@ -5,6 +5,7 @@ int sum1(int a, int b, int *overflow) {
 int c = 0;
 if (a > 0 && b > 0 && (INT_MAX - b < a) || a < 0 && b < 0 && (INT_MIN - b > a)){
     *overflow = 1;
+     c = a + b;
 }
 else{
     *overflow = 0;
@@ -43,26 +44,26 @@ int main(){
   a=100;
   b=231; 
   c = sum1(a,b,&ov1);
-  printf("s=%d, over=%d", c, ov1);
+  printf("\ns=%d, over=%d", c, ov1);
 
-  a=11111111110;
-  b=23111111111; 
+  a=3111111101;
+  b=2311111111; 
   c = sum1(a,b,&ov1);
-  printf("s=%d, over=%d", c, ov1);
+  printf("\ns=%d, over=%d", c, ov1);
 
   a=100;
   b=231; 
-  c = sum2(a,b,&ov1);
-  printf("s=%d, over=%d", c, ov2);
+  c = sum2(a,b,&ov2);
+  printf("\ns=%d, over=%d", c, ov2);
 
-  a=11111111110;
-  b=23111111111; 
-  c = sum2(a,b,&ov1);
-  printf("s=%d, over=%d", c, ov2);
+  a=3111111110;
+  b=2311111111; 
+  c = sum2(a,b,&ov2);
+  printf("\ns=%d, over=%d", c, ov2);
 
-  a=11111111110;
-  b=23111111111; 
+  a=3111111110;
+  b=2311111111; 
   c = usumm(a,b,&ov1);
-  printf("s=%d, over=%d", c, ov1);
+  printf("\ns=%d, over=%d", c, ov1);
 }
 

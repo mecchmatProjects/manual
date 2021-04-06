@@ -10,6 +10,6 @@ test();
 }
 
 void test(){
- printf("\n\nAll variables are accessed from test function"); .. // всі змінні доступні
+ printf("\n\nAll variables are accessed from test function"); // всі змінні доступні
  printf("\nvalues: m=%d:n=%d:a=%d:b=%d", m,n,a,b);
 }

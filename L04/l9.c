@@ -5,6 +5,6 @@ else return n*factorial(n-1);
 }
 int main(){
 int x;
-printf("Ввести число x=");scanf(“%d”,&x);
+printf("Ввести число x=");scanf("%d",&x);
 printf("Факторіал x!=%Ld",factorial(x));
 }

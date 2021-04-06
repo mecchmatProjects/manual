@@ -4,7 +4,7 @@
 int globalvar = 1;
 extern int anotherglobalvar;
 static int privatevar;
-f(){             
+void f(){             
    int localvar;
    int localvar2 = 2;
    static int persistentvar;

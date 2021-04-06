@@ -1,5 +1,6 @@
 /* застосування умовного розгалужування */
 #include <stdio.h>
+#include <math.h>
 int main() {
  int number;
  int ok;
@@ -9,12 +10,12 @@ int main() {
  if (!ok)  printf("Не коректно !! ");
 
  double x=9,y,z;
-   
-if(х > 7)  у = pow(x, 2);
-else у = sqrt(x);
-if(х <= 5)
-          z= ехр(х);
-else z= ++x;
+ if(x>7) y = pow(x, 2);
+ else y=sqrt(x);
+
+ if(x<=5)
+       z = exp(x);
+ else z = ++x;
  printf("%lf %lf %lf",x,y,z);
  return ok;
 }

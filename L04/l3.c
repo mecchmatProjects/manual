@@ -49,14 +49,14 @@ res = sign(2.39);    // res = 1
 float Max; // змінна - результат
 Max = MaxFloat(29.65f, (float)30); // Max = 30.0
 
-double x = 10.99;
-double y = 10.999;
-Max = MaxFloat(x, y); // Max = 10.999
-Max = MaxFloat((float)x, (float)y); // Max = 10.999 - так надійніше
+double x1 = 10.99;
+double y1 = 10.999;
+Max = MaxFloat(x1, y1); // Max = 10.999
+Max = MaxFloat((float)x1, (float)y1); // Max = 10.999 - так надійніше
 
 // виклик функції з іншого програмного коду
 int a = 8, b = 5, c = -10;
-int res;
+//int res;
 res = MaxInt3(a, b, c);       // res = 8
 res = MaxInt3(a, b+10, c+15); // res = 15
 res = MaxInt3(11, 2, 18);     // res = 18

@@ -8,5 +8,5 @@ return s;
 int main(){
 int a[]={ 3, 5, 7, 9, 11, 13, 15 };
 int s = sum( 7, a );
-printf(“s=%d”,s);
+printf("s=%d",s);
 }

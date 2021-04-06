@@ -22,7 +22,7 @@ char *ltrim(char *str, const char *seps)
 
 int main(){
 
-   char *str = "  text, ";
-   char *res = ltrim(str," ,");
+   char str[10] = "  text, ";
+   char* res = ltrim(str," ,");
    printf("R=%s", res);
 }
