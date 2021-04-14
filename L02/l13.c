@@ -1,10 +1,20 @@
 #include <stdio.h>
-int main () {
+int main() {
    /* визначення локальної змінної */
-   int a = 10;
+   int i = 5;
    /* виконується цикл */
    do {
-      printf("value of a: %d\n", a);
-      a = a + 1;
-   }while( a < 20 );
+      printf("i = %d;\n", i);
+      i = i + 1; // i++
+   }while(i < 12);
 }
+
+/*
+i = 5;
+i = 6;
+i = 7;
+i = 8;
+i = 9;
+i = 10;
+i = 11;
+*/

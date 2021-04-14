@@ -1,31 +1,35 @@
 #include <stdio.h>
 #define N 80
-typedef struct names{ /*перший шаблон*/
- char imya[N];
- char prizv[N];
-} names;
+typedef struct Names{ /*перший шаблон*/
+ char name[N];
+ char surname[N];
+} Name;
 
-typedef struct harakter { /*другий шаблон*/
+struct Harakter { /*другий шаблон*/
 
-  struct names druzi; /*вкладена структура*/
-  char bludo[N];
-  char robota[N];
-  float zarob;
-} harakter;
+  Name friend; /*вкладена структура*/
+  char dish[N];
+  char job[N];
+  float salary;
+} Harakter;
 
 int main() {
   /*ініціалізація змінної*/
-  struct harakter x1[2] = { 
-       
+  struct Harakter x1[2] = {        
         {{"Іван" ,"Петренко"}, "вареники", "інженер", 30250.00},
         {{"Петро","Іващенко"},"борщ","лікар",40325.00}
        };
-  struct harakter *x2;
+  struct Harakter *x2;
  
  x2=&x1[0]; /*вказує на структуру*/
- printf("заробіток: %lf \n",x2->zarob);
+ printf("заробіток: %lf \n",x2->salary);
  x2++; /*вказує на наступну структуру*/
- printf("заробіток: %lf \n", (*x2).zarob);
- printf("улюблена страва %s - %s  \n ",x2->druzi.prizv,x2->bludo);
+ printf("заробіток: %lf \n", (*x2).salary);
+ printf("улюблена страва %s - %s  \n ",x2->friend.surname,x2->dish);
 }
 
+/*
+заробіток: 30250.000000 
+заробіток: 40325.000000 
+улюблена страва Іващенко - борщ
+*/

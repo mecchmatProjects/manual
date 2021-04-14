@@ -3,11 +3,13 @@
 #include <math.h>
 int main() {
  int number;
- int ok;
- printf("Введіть число з інтервалу 1..100: ");
+ int condition;
+ printf("Число з інтервалу 1..100: ");
  scanf("%d",&number);
- ok=(1<=number) && (number<=100);
- if (!ok)  printf("Не коректно !! ");
+ condition = (0<number) && (number<101);
+ if (!condition){
+    printf("Не коректно !! ");
+ }
 
  double x=9,y,z;
  if(x>7) y = pow(x, 2);

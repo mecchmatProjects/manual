@@ -1,8 +1,18 @@
 #include <stdio.h>
 int main () {
-   int a;
+   int i;
    /* виконання циклу for */
-   for( a = 10; a < 20; a = a + 1 ){
-      printf("value of a: %d\n", a);
+   for( i = 5; i < 12; i = i + 1 ){
+      printf(" i = %d;\n", i);
    }
 }
+
+/*
+ i = 5;
+ i = 6;
+ i = 7;
+ i = 8;
+ i = 9;
+ i = 10;
+ i = 11;
+*/

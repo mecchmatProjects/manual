@@ -5,7 +5,7 @@ int main(){
  printf("Введiть число b: "); scanf("%f",&b);
  if (b==0) printf("Ділення на нуль ! ");
  else {
- c=a/b;
- printf("a: b == %g",c);
+   c=a/b;
+   printf("a: b == %g",c);
  };
 }
