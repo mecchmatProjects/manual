@@ -8,6 +8,9 @@ int main(){
   printf("n=:");
   scanf("%u ",&n);
   double** a; //a - вказівник на масив вказівників на рядки
+
+  //double** wrong = new double[n][m]; //error: cannot convert ‘double (*)[3]’ to ‘double**’ 
+
   a=new double* [n]; //виділення пам’яті для масиву вказівників на n рядків
   for(unsigned i=0;i<n;i++)
 	a[i]=new double [m]; /*виділення пам’яті для кожного рядка масиву розмірністю nxm */
