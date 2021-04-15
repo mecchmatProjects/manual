@@ -97,7 +97,7 @@ Bruce Eckel. Thinking on C++.(https://www.micc.unifi.it/bertini/download/program
 
 Fleuret F. C++ Lecture Notes (https://fleuret.org/francois/files/Francois_Fleuret_-_C++_Lecture_Notes.pdf)
 
-Jens Gustedt. Modern C - https://modernc.gforge.inria.fr/
+Jens Gustedt. Modern C ( https://modernc.gforge.inria.fr/)
 
 C.N.King. C programming: A modern approach. - kuking.com. Second edition - 820 p.  
 

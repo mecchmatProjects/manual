@@ -1,0 +1,212 @@
+
+Плагіат:
+https://text.ru
+
+Орфографія:
+https://languagetool.org/ru - All/Ru/Ukr
+https://ukrainskamova.com/index/wiki/0-30 - Ukr
+
+https://www.online-spellcheck.com/ - Eng
+
+
+You've just shared your ideas on the features of academic writing and had a look at what other students have had to say. You've probably read comments about academic writing:
+discussing complicated ideas, 
+using perfect grammar with good vocabulary, 
+giving evidence to support your points, 
+being well organised, 
+being formal, 
+and so on. 
+
+Academic writing can really be put into three main categories. That is content, organisation, and language. 
+ - Content refers to the main ideas and information you want to give in your essay. What are the main points you want to make? 
+What evidence--that is, details and examples--can you give to support your main points? Content is really the reason for writing in the first place and will obviously determine howwell you answer the question. 
+ - Organisation refers to how well you arrange those ideas. Are the paragraphs well structured and in a logical order, well linked together? Is there an introduction that hooks inthe reader and makes them want to read your writing and a good conclusion at the end to remind the reader of your main points? 
+ - Finally, language--is your essay well written with accurate grammar, good spelling, and in a formal academic style? 
+
+The three main categories combined to form academic writing are summarised as follows:
+
+In Content, one should:
+
+- understand the question well
+
+- elaborate ideas
+
+- make sure ideas are logical and relevant
+
+In Organisation, one should:
+
+- arrange ideas
+
+- create well-structured paragraphs
+
+- form a logical order for all ideas
+
+- link ideas together
+
+In Language, one should:
+
+- use accurate grammar
+
+- use good spelling
+
+- emphasise on formal academic style
+
+- make sure the writing is comprehensible for readers
+
+
+
+The 7 Cs refers to seven characteristics of effective professional writing. This writing should be
+
+    Clear
+
+    Concise
+
+    Concrete
+
+    Coherent
+
+    Correct
+
+    Complete
+
+    Courteous.
+Revision of your document should be undertaken in 4 stages:
+
+    Check formatting for readability
+
+    Review content to ensure the document contains all necessary information in a logical order
+
+    Edit sentence style and structure to make sure it is formal, clear, and correct
+
+    Proofread for grammar, punctuation, spelling, and format errors.
+
+
+
+Introduction
+
+Background: English - most preferred international language. Used in many fields. Children learn English in primary schools and kindergartens.
+
+Thesis statement This essay - main reasons for popularity.
+Paragraph 1
+
+Paragraph leader: English - official language for majority.
+
+Main body: Examples: business, science, arts etc. Do well in English to get a good job.
+Paragraph 2
+
+Paragraph leader: Young children better at studying languages than adults.
+
+Main body: Children living in different countries - learn 3 or 4 languages, so more young children learn English in kindergartens.
+Paragraph 3
+
+Paragraph leader: Parents care for their children’s future.
+
+Main body: To be successful, need to study hard and learn English early in kindergarten.
+Conclusion
+
+Summary: English: widely spoken. Children learn early and good at English.
+
+Prediction: More people study English.
+
+Now you have seen Chaohua’s plan we would like you to:
+
+    Write a plan for your own essay using the model at the top of this page. You will use your plan later this week to write your first draft.
+
+Remember that your essay will be about 350 words.
+
+Essay 0:
+
+
+The transition to another social system in Ukraine change the style of life completely.
+These days people spend more time at work and less time in shops seeking for defecite goods.
+The social shifts change the behaviour of common citizens.
+The aims of ordinary people are now concerened more for money finding, jobs and personal grows and 
+less for information seeking, public life and communication. New buisnesses are set up. 
+People in general are more free to live the ways they like, but not everyone can admit it, 
+because the price of living in all senses was grown up.
+These changes also led to increasing and making visible gap between poor people, middle-class
+and rich ones. Many places outside the capitals and fences of mighty men villas are looked broken and abandoned, 
+poor parts of towns are transferred to slums. There are a lot of people who are thrown out
+on the sidelines of life and one can easily see the signs of poverty almost everywhere.  
+
+
+Essay 1:
+The reasons why people live in the suburbs of Kyiv
+
+Nowadays many people from Ukraine settles down in the neighborhood of Kyiv.
+This shift is caused by changes in land legislation in recent years.
+The new possibilities for developers to build new townhouses and multistory buildings
+in the area of Kyiv vicinity have emerged. 
+So the old farm fields were transformed into construction sites,
+ and new small towns and villages appeared as well as old 
+villages and towns were rapidly enlarged.
+The concurrency forces the salespeople to keep reasonable prices for
+apartments, therefore a lot of people with salary higher than low-middle class are now 
+become capable to buy or lend apartments here. 
+The proximity to the city allows for dwellers to live in the suburbia and work in Kyiv.
+Some other people are also attracted by the possibility to live near forests and lakes.
+Also the increase of the population raise the amount of shops and 
+other small and big enterprises here. 
+So, despite the problems with roads and traffic and also some lack of well-thought 
+infrastructure, Kyiv suburbs are now becoming attractive place to live on.  
+
+
+Essay 2:
+
+Importance of programming language C for modern programming
+
+Еhesis: It is useful for C++ programmers to learn also C.
+
+P1. C is programming language that is still popular for developing.
+
+P2. C is essential part of C++ language.
+
+C. Learning C language is easy and useful task. 
+The future of C looks bright.  
+
+Importance of programming language C for modern programming
+
+Essential part of junior C++ programmers today are considering C as obsolete and
+not worth of additional learning. The goal of the essay is to prove that mastering of advanced C language is
+crucial and useful task for C++ developers.
+
+Some programmers argue that C language and C++ are different programming languages.
+And while C++ is claimed to be modern, powerful and albeit difficult, but needed to be studied
+almost everywhere, the C language is a niche programming tool required only by low-level programmers
+and some other exotic anachoretes. However, in the author's opinion, C language is not so different to C++
+and can be used almost everywhere. The basic syntax of both languages (or to say dialects of one language)
+are the same, and while modern C++ standards could look differently the core logic of programs can be almost the same,
+and all features and operators of C language are still used in even the most up-to-date C++ applications.
+
+C is programming language that is still popular for developing.  For example, in recent
+ranking of programming languages by TIOBE index [] it is placed on 1st place. Also, it is often
+presented in Top 10 by many other rankings, and also worth to mention, that it can be also included
+in this ratings by the name of C++. For example, big part of OS development that is performed
+on C++ usually uses not much of clear C++ code, but rather C code with some addition of C++
+classes, templates and libraries. Many HR also use C tasks for testing C++-coders
+and it is not so useless thing whilst many libraries are still using C-code style.
+
+As it is well-known, C - is also part of C++ library and C++ compilers, and therefore programmers,
+ should be able to translate and work with pure C code. Some basic functions, like printing, quick calculations
+and so on still working best in C version then in C++ version, so ability to write good C style code
+is useful for any developer. Moreover, the lesser size of library and less complicated syntax
+ comparing to C++ language (of course in complex things, unlike input/output or working with strings)
+ makes learning and mastering C language easier task than mastering whole C++. Also,
+understanding of C concepts makes easier to understand the peculiarities of C++ language.
+
+Taking everything into account, mastering of language C is an easy and useful task for C++ and not only C++ programmers.
+The actuality of the language should probably will be persistent as long as C++ will be popular
+and existence of particular tasks suited for C makes its learning necessary for
+good C++ programmer.
+ 
+Review:
+ Does the introduction include some general background to the title? Is there a thesis statement?
+Hi Nick! I hope my suggestions are useful for you to improve your essay. In the introduction, I think you should include more information about the background. For example: "Only 30 % of C++ programmers have mastered C language."
+
+Is the topic focus of each paragraph clear? Are the ideas in each paragraph supported with details and examples?
+The topic focus of each paragraph is clear. But in the first paragraph, Nick doesn´t explain why C and C++ are not so different. In my opinion, you could improve your first paragraph so: "Some programmers argue that C language and C++ are different programming languages. However, in the author's opinion, C language is not so different to C++and can be used almost everywhere." And then, you should write some reasons why you believe both languages programming aren't so different.
+
+Does the conclusion sum up the main ideas of the essay? Is there a suggestion for the future (a recommendation or prediction or solution)?
+At first, to introduce the conclusion, you should use the right word. For example: Finally, lastly, all in all, taking everything into account, on the whole, all things considered, in conclusion, to sum up. The use of the word "therefore" is not correct in this case. On the other hand, in the conclusion and in the title you suggest that learning the C language is important for C++ programmers and others. But in the introduction, you claim that learning the C language is only important for C++ developers. Furthermore, notice that in the introduction, you have written "leaning" instead of "learning". To my mind, the rest of the essay is ok. 
+
+
