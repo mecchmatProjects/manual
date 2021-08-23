@@ -16,21 +16,29 @@
 Підручник / О.Г. Трофименко, Ю.В. Прокоп, І.Г. Швайко, Л.М. Буката, Л.А. Косирева, Ю.Г. Леонов, В.В. Ясинський; за ред. О.Г. Трофименко. — Одеса: Фенікс, 2010. — 544 с.
 
 
-http://www.cplusplus.com/reference/
-https://www.learncpp.com/
-https://www.tutorialspoint.com/cprogramming/index.htm
-https://en.cppreference.com/w/c/language/type
-https://www.eskimo.com/~scs/cclass
-https://uk.wikipedia.org/wiki/C_(%D0%BC%D0%BE%D0%B2%D0%B0_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F)
+Електронний довідник бібліотек С++ [Електронний ресурс] –Режим доступу до ресурсу: http://www.cplusplus.com/reference/clibrary/
 
-ANSI 89 – American National Standards Institute, American National Standard for Information Systems Programming Language C, 1989.
+Електронний підручник з С++[Електронний ресурс] –Режим доступу до ресурсу: https://www.learncpp.com/
 
-http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1124.pdf —  стандарт С99
-http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf — чорнетка стандарту С11
-https://wiki.sei.cmu.edu/confluence/display/c/SEI+CERT+C+Coding+Standard
+Відкритий навчальний посібник C Tutorial [Електронний ресурс] –Режим доступу до ресурсу: https://www.tutorialspoint.com/cprogramming/index.htm
 
-http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1040.pdf — стандарт для роботи с широкими символами
-https://purecodecpp.com/uk/archives/920
+Електронний довідник C language [Електронний ресурс] –Режим доступу до ресурсу: https://en.cppreference.com/w/c/language
+
+Відкритий навчальний посібник C Programming [Електронний ресурс] –Режим доступу до ресурсу: https://www.eskimo.com/~scs/cclass
+
+Вікіпедія про мову С[Електронний ресурс] –Режим доступу до ресурсу: https://uk.wikipedia.org/wiki/C_(%D0%BC%D0%BE%D0%B2%D0%B0_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F)
+
+ANSI 89 –Programming Language C: American National Standard for Information Systems : ANSI X3.159-1989 - 338с.
+
+Стандарт С99 [Електронний ресурс] –Режим доступу до ресурсу: http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1124.pdf 
+
+Чорнетка стандарту С11 [Електронний ресурс] –Режим доступу до ресурсу: http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf
+
+CERT C Coding Standard [Електронний ресурс] –Режим доступу до ресурсу: https://wiki.sei.cmu.edu/confluence/display/c/SEI+CERT+C+Coding+Standard
+
+Стандарт для роботи с широкими символами [Електронний ресурс] –Режим доступу до ресурсу: http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1040.pdf
+
+Відкритий підручник по С++ українською мовою[Електронний ресурс] –Режим доступу до ресурсу: https://purecodecpp.com/uk/archives/920
 
 Уэйт М. Язык Си / М. Уэйт, С. Прата, Д. Мартин. – М. : Мир, 1988. – 512 с
 
@@ -59,8 +67,14 @@ Beej’s Guide to C Programming (https://beej.us/guide/bgc/pdf/bgc_usl_c_2.pdf)
 
 Alex Allain. Jumping into C++ - 381 pp. (download from www.cprogramming.com)
 
+Креневич А. П. С у задачах і прикладах : навчальний посібник із дисципліни "Інформатика та програмування" / А.П. Креневич, О.В. Обвінцев. – К. : Видавничо-поліграфічний центр "Київський університет", 2011. – 208 с.
 
-С у задачах і прикладах : навчальний посібник із дисципліни "Інформатика та програмування" / А.П. Креневич, О.В. Обвінцев. – К. : Видавничо-поліграфічний центр "Київський університет", 2011. – 208 с.
+Креневич А. П.  С у задачах і прикладах : навч. посібник / А. П. Креневич, О. В. Обвінцев. – Київ : ВПЦ “Київський університет”, 2012. – 212 с.
+
+Вакал Є.С.,Личман В.В.,Обвінцев О.В.,Бублик В.В.,Попов В.В. Задачі до курсу «Інформатика та програмування». [Електронний ресурс] –Режим доступу до ресурсу: http://matfiz.univ.kiev.ua/informatics/problems/
+
+Збірник задач з дисципліни "Інформатика і програмування" Вакал Є.С., Личман В.В., Обвінцев О.В., Бублик В.В., Довгий Б.П., Попов В.В. -2-ге видання, виправлене та доповнене –К.:ВПЦ "Київський університет", 2006.–94с
+
 
 Абрамян, М. Э. Введение в стандартную библиотеку шаблонов C++. Описание, при-
 меры использования, учебные задачи : учебник / М. Э. Абрамян ; Южный
