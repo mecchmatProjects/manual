@@ -5,8 +5,9 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    long long x=24324523;
-    long long y = x*x;
+    // код який використовує пришвидшене-введення виведення
+    long long x=24324523, y;
+    cin>>y;
+    long long z = x*x;
     cout<<"y="<<y<<"\n";
-    return 0;
 }
