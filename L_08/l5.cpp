@@ -1,5 +1,4 @@
 #include <iostream>
-
 class TimeH{
     /* private :  Ключове слово private можна не використовувати – це специфікатор по замовченню */
     //захищені члени
@@ -9,12 +8,9 @@ class TimeH{
     unsigned getTotalMinutes() {
         return hours*60 + minutes;
     }
-    
+  
 public: // публічні члени та методи
-    // Конструктор
-    /*TimeH(unsigned h=0, unsigned m=0) {
-        setTime(h,m);
-    }*/
+   // коректна установка часу 
     void setTime(unsigned h=0, unsigned m=0){
       hours = 0;
       minutes = 0;
@@ -24,20 +20,18 @@ public: // публічні члени та методи
       }
     }
 
-    //метод для виведення часу - загальнодостпуний
+    //метод для виведення часу - загальнодоступний
     void show() {
         std::cout<<"Time is:"<<hours<<":"<<minutes<<"\n";
     }
-    
-
-}; // декларація класу завершується крапкою з комою
-
+}; 
 
 int main(){
-
   TimeH time;
   time.setTime();
   time.show(); 
+  // time.getTotalMinutes() // заборонений доступ – буде помилка
+  // time.hours = 25;
 
   TimeH time1;
   time1.setTime(12,20);

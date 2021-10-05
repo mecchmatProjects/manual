@@ -1,5 +1,4 @@
 #include <iostream>
-
  
 class Angle {
    private:
@@ -26,6 +25,16 @@ class Angle {
          return Angle(gradus, minutes);
       }
 
+   // prefix and postfix decrement operators.
+   Angle& operator--(){       // Prefix decrement operator.
+       gradus--;
+       return *this;
+   }
+   Angle operator--(int){     // Postfix decrement operator.
+       Angle temp = *this;
+       --*this;
+       return temp;
+   }
       Angle operator+(const Angle& a) {
         int p=0;
         int m = this->minutes + a.minutes;
@@ -64,6 +73,10 @@ int main() {
    
    Angle a3 = a1 + a2;
    a3.displayAngle();
+
+   a2--;
+   a2.displayAngle();
+   (--a3).displayAngle();
 
    Vektor v1(2,-3);
    -v1; v1.showVektor();

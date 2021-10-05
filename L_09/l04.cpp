@@ -1,18 +1,17 @@
 #include <iostream>
-using namespace std;
 class PrintData {
    public:
       void print(int i) {
-        cout << "Printing int: " << i << endl;
+        std::cout << "Printing int: " << i << std::endl;
       }
       void print(float f) {
-        cout << "Printing float: " << f << endl;
+        std::cout << "Printing float: " << f << std::endl;
       }
       void print(double df) {
-        cout << "Printing double: " << df << endl;
+        std::cout << "Printing double: " << df << std::endl;
       }
       void print(const char* c) {
-        cout << "Printing character: " << c << endl;
+        std::cout << "Printing characters: " << c << std::endl;
       }
 };
 
@@ -26,5 +25,4 @@ int main(void) {
    pd.print(234.567);
 // Виклик методу print для символів
    pd.print("Hello C++");
-   return 0;
 }
