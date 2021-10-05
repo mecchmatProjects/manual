@@ -1,34 +1,37 @@
 #include <iostream>
-using namespace std;
-class Box {
-   public:
+#include <cstring>
+#include <string>
+class Person {
+      unsigned  age;   // вік
+      char name[20]; // ім'я
+      double height;  //  зріст
+      bool gender;   // стать
+   public: 
       static int objectCount; // статичний член – лічильник об’єктів
       // Конструктор
-      Box(double l = 2.0, double b = 2.0, double h = 2.0) {
-         cout <<"Constructor called." << endl;
-         length = l;
-         breadth = b;
+      Person(unsigned a, const char* n, double h, bool g){
+         strncpy(name,n,20);
+         age = a;
          height = h;
-         // збільшуємо на одиницю лічильник об’єктів
+         gender = g;  
          objectCount++;
-      }
-      double Volume() {
-         return length * breadth * height;
-      }
-      
-   private:
-      double length;     // Length of a box
-      double breadth;    // Breadth of a box
-      double height;     // Height of a box
+      } 
+
+ // Декларація методів
+      void getName(){
+         std::cout << name<<"\t";
+      } 
+      unsigned getAge(){
+	 return gender?age:25;	  
+      } 
 };
 
 // Інціалізуємо статичний член класу
-int Box::objectCount = 0;
+int Person::objectCount = 0;
 
 int main(void) {
-   Box Box1(3.3, 1.2, 1.5);    
-   Box Box2(8.5, 6.0, 2.0);    
-   // Друкуємо загальну кількість обєктів
-   cout << "Total objects: " << Box::objectCount << endl;
-   return 0;
+   Person p1(33, "Vasya", 1.8, true);    // Визначили p1
+   Person p2(27, "Masha", 1.5, false);    // Визначили p2
+   std::cout << "Total objects: " << Person::objectCount << std::endl;
 }
+

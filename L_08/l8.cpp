@@ -1,12 +1,11 @@
-
 #include <iostream>
 #include <cstring>
 #include <cctype>
-class Cat {
+class Person {
    public: 
-      unsigned  age;   // вік кота
+      unsigned  age;   // вік 
       char name[20]; // ім'я
-      double mass;  // маса кота
+      double height;  // зріст 
       bool gender;   // стать
 
  // Декларація методів
@@ -17,38 +16,32 @@ class Cat {
       void setGender(bool stat);
 };
 
-
-unsigned Cat::getAge(){
-      return gender?age:20;
+unsigned Person::getAge(){
+      return gender?age:25;
 }
 
-void Cat::setName(const char* name_){
+void Person::setName(const char* name_){
     strncpy(name,name_,20);
 }
-void Cat::setMass(double mas){
-     mass = mas;
-}
 
-void Cat::setAge(unsigned ag){
+void Person::setAge(unsigned ag){
     age = ag;	
 }
 
-void Cat::setGender(bool stat){
+void Person::setGender(bool stat){
     gender = stat;
 }
 
-
 int main(){
 
-  Cat c1,c2;
+  Person c1,c2;
   c1.setName("Vasya");
   c1.setAge(33);
   c1.setGender(true);
-  std::cout<<c1.getAge()<<"\n"; 
+  std::cout<<c1.name<<" age:"<<c1.getAge()<<"\n"; 
 
   c2.setName("Masha");
   c2.setAge(29);
   c2.setGender(false);
-  std::cout<<c2.getAge()<<"\n"; 
-
+  std::cout<<c2.name<<" age:"<<c2.getAge()<<"\n"; 
 }

@@ -10,13 +10,11 @@ class TimeH{
         return hours*60 + minutes;
     }
     
-
 public: // публічні члени та методи
     // Конструктор
     /*TimeH(unsigned h=0, unsigned m=0) {
         setTime(h,m);
     }*/
-
     void setTime(unsigned h=0, unsigned m=0){
       hours = 0;
       minutes = 0;
@@ -44,5 +42,4 @@ int main(){
   TimeH time1;
   time1.setTime(12,20);
   time1.show(); 
-
 }

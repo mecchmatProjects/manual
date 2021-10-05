@@ -1,6 +1,33 @@
 #include <iostream>
 #include <cstring>
 
+class Person {
+   public: // загальний доступ до членів класу  (пояснення - далі)
+      unsigned  age;   // вік 
+      char name[20]; // ім'я
+      double height;  // зріст 
+      bool gender;   // стать
+};
+
+int main() {
+
+   Person p1,p2;
+
+   p1.age = 21;
+   p1.gender = true;
+   p1. height = 78.5;
+   strcpy(p1.name, "Vasya"); 
+
+   p1.age = 22;
+   p1.gender = true;
+   p1. height = 88.5;
+   strcpy(p2.name, "Petya");
+
+   std::cout<<"Average height: "<< (p1. height + p2.height )/2<<std::endl;
+}
+
+
+/*
 class Box {
    public:
       double length;   // Length of a box
@@ -8,16 +35,7 @@ class Box {
       double height;   // Height of a box
 };
 
-class Cat {
-   public: // загальний доступ до членів класу  (пояснення - далі)
-      unsigned  age;   // вік кота
-      char name[20]; // ім'я
-      double mass;  // маса кота
-      bool gender;   // стать
-};
-
-
-int main() {
+int main(){
    Box Box1;        // Декларуємо Box1 класу Box
    Box Box2;        // Декларуємо Box2 of typ класу Box
    double volume = 0.0;     // Store the volume of a box here
@@ -39,20 +57,6 @@ int main() {
    // виводимо обєм box 2
    volume = Box2.height * Box2.length * Box2.breadth;
    std::cout << "Volume of Box2 : " << volume <<std::endl;
-
-
-   Cat cat1,cat2;
-
-   cat1.age = 21;
-   cat1.gender = true;
-   cat1.mass = 78.5;
-   strcpy(cat1.name, "Vasya"); 
-
-   cat1.age = 22;
-   cat1.gender = true;
-   cat1.mass = 88.5;
-   strcpy(cat2.name, "Petya");
-
-   std::cout<<"Average mass: "<< (cat1.mass + cat2.mass)/2<<std::endl;
 }
 
+*/

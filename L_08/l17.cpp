@@ -28,12 +28,13 @@ class CloseFriend{
 
 
 class Cat {
-      unsigned  age;   // вік кота
+      unsigned  age;   // вік 
 public:
       void setAge (unsigned ag);
-      friend void printRealAge(Cat x); //
-      friend class Doctor; // 
-      friend CloseFriend; //
+      friend void printRealAge(Cat x); // вказали дружню функцію
+      friend class Doctor::treat(Cat& x); /* вказали дружній метод класу
+        - клас краще передавати за посиланням */
+      friend CloseFriend; // казали дружній клас
 };
 
 void Cat::setAge(unsigned ag){

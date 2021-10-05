@@ -1,5 +1,45 @@
 #include <iostream>
 #include <cstring>
+
+class Person {
+   public: 
+      char name[20]; // ім'я
+      bool gender;   // стать
+      unsigned getAge();
+      void setAge(unsigned ag);
+      void introduce();
+private:
+      unsigned  age;   // вік 
+      double height;  // зріст
+};
+
+unsigned Person::getAge(){
+      return gender?age:25;
+}
+
+void Person::setAge(unsigned ag){
+    age = ag;
+}
+
+void Person::introduce(){
+   std::cout<<"My name is "<<name<<"\n";
+}
+
+int main() {
+
+   Person girl;
+   strcpy(girl.name,"Carmen");
+   girl.gender = false; 
+   girl.introduce();
+   
+   //girl.age = 20; // заборонена дія
+   girl.setAge(25);
+   std::cout<<"age is "<< girl.getAge();
+}
+
+/*
+#include <iostream>
+
 class Box {
    public: // декларація членів та методів
       double length;
@@ -63,3 +103,4 @@ int main() {
    cat.setAge(20);
    std::cout<<"age is "<< cat.getAge();
 }
+*/
