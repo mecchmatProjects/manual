@@ -7,37 +7,36 @@ class StoreAngles{
    StoreAngles(){angles=0;}  
 };
 
-
 class DrawableObject {
   public:
-    virtual void draw(StoreAngles& ) const = 0; //рахує кути
+    virtual void angleCount(StoreAngles& ) const = 0; //рахує кути
  };
 
  class Triangle : public DrawableObject {
  public:
-   void draw(StoreAngles&) const; //малює трикутник
+   void angleCount(StoreAngles&) const; //малює трикутник
  };
 
  class Rectangle : public DrawableObject {
  public:
-   void draw(StoreAngles&) const; //малює прямокутник
+   void angleCount(StoreAngles&) const; //малює прямокутник
  };
 
  class Circle : public DrawableObject {
  public:
-   void draw(StoreAngles&) const; //малює коло
+   void angleCount(StoreAngles&) const; //малює коло
  };
 
 
-void Triangle::draw(StoreAngles& x) const{
+void Triangle::angleCount(StoreAngles& x) const{
     x.angles+=3;	
 } 
 
-void Rectangle::draw(StoreAngles& x) const{
+void Rectangle::angleCount(StoreAngles& x) const{
     x.angles+=4;	
 } 
 
-void Circle::draw(StoreAngles& x) const{
+void Circle::angleCount(StoreAngles& x) const{
     x.angles+=0;	
 } 
 
@@ -53,9 +52,8 @@ int main(){
 
  for(int i=0;i<3;++i) {
    DrawableObject *object = drawableList[i];
-   object->draw(drawingBoard);
+   object->angleCount(drawingBoard);
  }
 
  std::cout<<"total number of angles:"<<drawingBoard.angles;
-
 }

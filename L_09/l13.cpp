@@ -1,40 +1,65 @@
-class Foo{
+#include<iostream>
+
+class Base{
 public:
-  void f()  {
-    std::cout << "Foo::f()" << std::endl;
-  }
-  virtual void g()  {
-    std::cout << "Foo::g()" << std::endl;
+  virtual Base* create();
+  virtual Base* create1() const;
+  void print(){
+     std::cout<<"Base\n"; 
   }
 };
- 
-class Bar : public Foo{
+
+class Derived : public Base{
+
 public:
-  void f()  {
-    std::cout << "Bar::f()" << std::endl;
-  }
-  virtual void g()  {
-    std::cout << "Bar::g()" << std::endl;
+  virtual Derived* create();
+  virtual Derived* create1() const;
+  void print(){
+     std::cout<<"Derived\n";
   }
 };
- 
-int main(){
-  Foo foo;
-  Bar bar;
 
-  Foo *baz = &bar;
-  Bar *quux = &bar;
-
-  foo.f(); // "Foo::f()"
-  foo.g(); // "Foo::g()"
- 
-  bar.f(); // "Bar::f()"
-  bar.g(); // "Bar::g()"
-  // А тепер ….
-  baz->f();  // "Foo::f()"
-  baz->g();  // "Bar::g()"
-  quux->f(); // "Bar::f()"
-  quux->g(); // "Bar::g()"
-  return 0;
+Base* Base::create(){
+  return this;
 }
 
+
+Base* Base::create1() const { 
+  return new Base(); 
+}
+
+Derived* Derived::create(){
+  return this;
+}
+
+
+Derived* Derived::create1() const { 
+  return new Derived(); 
+}
+
+
+int main(){
+  
+  Base b;
+  Base* pb = b.create(); 
+  //Derived* pcb = b.create();
+  pb->print(); // Base
+
+  Derived c;
+  Derived* pc = c.create(); 
+  Base* pbc = c.create();
+  pc->print(); // Derived
+  pbc->print(); // Base
+
+
+  Base* pb1 = b.create1(); 
+  //Derived* pcb1 = b.create1();
+  pb1->print(); // Base
+
+  
+  Derived* pc1 = c.create(); 
+  Base* pbc1 = c.create();
+  pc1->print(); // Derived
+  pbc1->print(); // Base
+
+}

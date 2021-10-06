@@ -2,40 +2,75 @@
 
 class Vehicle {
  public:
-     explicit  Vehicle( int topSpeed ) : m_topSpeed( topSpeed ) {}
-     int TopSpeed() const {
-        return m_topSpeed;
+     Vehicle() {}
+     Vehicle(double v): speed(v) {}
+     double TopSpeed() const {
+        return speed;
      }
 
-     virtual void Save( std::ostream& ) const = 0;
- 
- private:
-     int m_topSpeed;
+     virtual void print(std::ostream& ) const = 0;
+ protected:
+     int speed;
  };
 
- class WheeledLandVehicle : public Vehicle {
+class WheeledVehicle : public Vehicle {
  public:
-     WheeledLandVehicle( int topSpeed, int numberOfWheels )
-     : Vehicle( topSpeed ), m_numberOfWheels( numberOfWheels ) {}
-     int NumberOfWheels() const {
-       return m_numberOfWheels;
+     WheeledVehicle(){}
+     WheeledVehicle(double v, unsigned wheels)
+     : Vehicle(v), numberOfWheels(wheels) {}
+     unsigned getNumberOfWheels() const {
+       return numberOfWheels;
      }
 
-     void  print( std::ostream& ) const; // цей метод implicitly virtual
- 
- private:
-     int m_numberOfWheels;
- };
-
- class TrackedLandVehicle : public Vehicle {
- public:
-    TrackedLandVehicle ( int topSpeed, int numberOfTracks )
-    : Vehicle( topSpeed ), m_numberOfTracks ( numberOfTracks )
-    {}
-    int NumberOfTracks() const {
-       return m_numberOfTracks;
+     void  print( std::ostream& ) const{ // цей метод implicitly virtual
+       std::cout<< "Print Wheels" << numberOfWheels<<"\n";
     }
-    void Save( std::ostream& ) const; // метод implicitly virtual
+ protected:
+     unsigned numberOfWheels;
+};
+
+class Car: public WheeledVehicle{
+ public:
+    Car(){} 
+    Car(double v, int vol)
+    : WheeledVehicle(v,4), volume(vol)
+    {}
+    int engineVolume() const {
+       return volume;
+    }
+    void  print( std::ostream& ) const{ // цей метод implicitly virtual
+       std::cout<< "Print Car, Wheels" << numberOfWheels<<" vol:"<<volume<<"\n";
+    }
   private:
-    int m_numberOfTracks;
+    int volume;
   };
+
+class Plane: public Vehicle {
+  public:
+     Plane(){}
+     Plane(double v, double h)
+     : Vehicle(v), maxHigh(h) {} 
+     double getMaxHigh() const {
+       return maxHigh;
+     }
+
+     void  print( std::ostream& ) const{ // цей метод implicitly virtual
+            std::cout<< "Print Plane ,maxHigh=" << maxHigh<<"\n";
+     }
+ private:
+     double maxHigh;
+};
+
+int main(){
+   Vehicle *mas[4] ;
+   mas[0] = new WheeledVehicle(15.0,2);
+   mas[1] = new Car(155.0,45);
+   mas[2] = new Plane(855.0,15.0);
+   mas[3] = new Car(125.0,55);
+
+   for(int i=0;i<4;++i) {
+     mas[i]->print(std::cout);
+     delete mas[i];
+  }
+}
+

@@ -13,6 +13,6 @@ int main(int argc, char **argv)
     
     strcpy(CC2, CC);//strcpy(CC2,"This is a string");
 
-    std::cout << CC << endl;
-    std::cout << CC2 << endl;
+    std::cout << CC << "\n";
+    std::cout << CC2 << "\n";
 }

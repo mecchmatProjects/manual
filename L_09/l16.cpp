@@ -9,6 +9,6 @@ int main(int argc, char **argv)
     SS = "This is a string";
     SS2 = SS;
 
-    std::cout << SS << endl;
-    std::cout << SS2 << endl;
+    std::cout << SS << "\n";
+    std::cout << SS2 << "\n";
 }
