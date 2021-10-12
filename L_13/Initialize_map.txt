@@ -1,0 +1,224 @@
+In this article we will discuss how to initialize a map with std::initialzer_list<T>.
+
+Let’s create a map of string as key and int as value and initialize it with initializer_list i.e.
+// Initialize a Map of string & int using initializer_list
+std::map<std::string, int> mapOfMarks = {
+        {"Riti",2},
+        {"Jack",4}
+};
+
+Here compiler will create following std::initializer_list<T> object internally,
+std::initializer_list<std::pair<const std::string, int> > = {
+        {"Riti",2},
+        {"Jack",4}
+};
+
+Here T is a std::pair<const std::string, int> because map store the elements internally as a pair.
+
+Initializing a map of string & vector
+
+// Initialize a Map of string & vector of int using initializer_list
+std::map<std::string, std::vector<int> > mapOfOccur =     {
+                            { "Riti", { 3, 4, 5, 6 } },
+                            { "Jack", { 1, 2, 3, 5 } }
+                            };
+
+Complete Example is as follows,
+
+Output:
+#include <iostream>
+#include <vector>
+#include <map>
+#include <list>
+int main() {
+    // Initialize a Map of string & int using initializer_list
+    std::map<std::string, int> mapOfMarks = { { "Riti", 2 }, { "Jack", 4 } };
+    for (auto entry : mapOfMarks)
+        std::cout << entry.first << " :: " << entry.second << std::endl;
+    std::cout << std::endl;
+    // Initialize a Map of string & vector of int using initializer_list
+    std::map<std::string, std::vector<int> > mapOfOccur =     {
+                                { "Riti", { 3, 4, 5, 6 } },
+                                { "Jack", { 1, 2, 3, 5 } }
+                                };
+    // Iterating over the map
+    for (auto entry : mapOfOccur) {
+        std::cout << entry.first << " :: ";
+        for (int i : entry.second)
+            std::cout << i << " , ";
+        std::cout << std::endl;
+    }
+    return 0;
+}
+
+Output:
+Jack :: 4
+Riti :: 2
+Jack :: 1 , 2 , 3 , 5 , 
+Riti :: 3 , 4 , 5 , 6 ,
+
+Initializing a member variable map in constructor with std::initializer_list
+
+#include <iostream>
+#include <vector>
+#include <map>
+#include <initializer_list>
+class Course {
+    std::map<std::string, int> mMapOfMarks;
+public:
+    Course(std::initializer_list<std::pair<const std::string, int> > marksMap) :
+            mMapOfMarks(marksMap) {
+    }
+    void display() {
+        for (auto entry : mMapOfMarks)
+            std::cout << entry.first << " :: " << entry.second << std::endl;
+        std::cout << std::endl;
+    }
+};
+int main() {
+    // Creating a Course Object and calling the constructor
+    // that accepts a initializer_list
+    Course mathsCourse { { "Riti", 2 }, { "Jack", 4 } };
+    mathsCourse.display();
+    return 0;
+}
+
+Output:
+Jack :: 4
+Riti :: 2
+
+
+
+ger keys to integer values.
+Key 	Value
+1 	10
+2 	20
+3 	30
+4 	40
+
+Generic Syntax
+
+#include <map>                                   //Header That implements map
+template < class Key,                                     // map::key_type
+           class T,                                       // map::mapped_type
+           class Compare = less<Key>,                     // map::key_compare
+           class Alloc = allocator<pair<const Key,T> >    // map::allocator_type
+           > class map;
+C++
+Copy
+
+Method 1 (Default Constructor)
+
+Default constructor doesn't take any params and creates an empty map with no key-value pairs at the time of initialization.
+
+#include <map>
+
+int main()
+{
+    // (1) Using Default constructor
+    std::map<int, int> mdefault;
+    mdefault[1] = 10;
+    mdefault[2] = 20;
+    mdefault[3] = 30;
+    mdefault[4] = 40;
+    return 0;
+}
+C++
+Copy
+
+We've used '[ ]' operator to insert values into our map.
+Method 2 (Range Constructor)
+
+Range constructor is used to copy a range of values from an existing map.
+Range is passed to the map constructor in format [start, end) which copies values starting from start till the element end but exclusive of end
+
+#include <map>
+
+int main()
+{
+    std::map<int, int> m;
+    m[1] = 10;
+    m[2] = 20;
+    m[3] = 30;
+    m[4] = 40;
+    m[5] = 50;
+    m[6] = 60;
+
+    // (2) Using Range constructor
+    std::map<int, int> mrange(m.find(2), m.find(5));
+    
+    return 0;
+}
+C++
+Copy
+
+In the above code, we are creating our desired map mrange by copying a range of values from an existing map m.
+Method 3 (Copy Constructor)
+
+Copy constructor is used to copy a whole existing map and the map to be copied is passed as a single param to the constructor.
+
+#include <map>
+
+int main()
+{
+    std::map<int, int> m;
+    m[1] = 10;
+    m[2] = 20;
+    m[3] = 30;
+    m[4] = 40;
+
+    // (3) Using Copy constructor
+    std::map<int, int> mcopy(m);
+    
+    return 0;
+}
+C++
+Copy
+
+In the above code, we are creating our desired map mcopy by copying the whole existing map m.
+Method 4 (Move Constructor)
+
+Move constructor is used to move a whole existing map, the map being moved is left in a valid state but no longer contains its elements. A single param is passed to the constructor which is move function taking the map to be moved as a param.
+
+#include <map>
+
+int main()
+{
+    std::map<int, int> m;
+    m[1] = 10;
+    m[2] = 20;
+    m[3] = 30;
+    m[4] = 40;
+
+    // (4) Using Move constructor
+    std::map<int, int> mmove(std::move(m));
+    
+    return 0;
+}
+C++
+Copy
+
+In the above code, we are creating our desired map mmove by moving all elements from the existing map m, after the constructor has successfully completed creation of new map mmove the previous map m is left with no key-value pairs.
+Method 5 (Initializer list Constructor)
+
+An Initializer List is a sequence of values separated by commas and wrapped in Curly braces, they are used to initialize data members of classes which is a map in our case as can be seen below.
+
+#include <map>
+
+int main()
+{
+    // (5) Using Initializer list constructor
+    std::map<int, int> minitlist {
+            {1, 10},
+            {2, 20},
+            {3, 30},
+            {4, 40},
+        };
+    return 0;
+}
+C++
+Copy
+
+In the above code, we are creating our desired map minitlist by representing our desired map value in Initializer list form and eventually using Initializer list Constructor.
+Prashant R
+
