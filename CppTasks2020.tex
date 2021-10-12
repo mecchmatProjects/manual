@@ -991,6 +991,11 @@ P?
 \(p = \left( 1 - \frac{1}{2^{2}} \right)\left( 1 - \frac{1}{3^{2}} \right)\ldots\left( 1 + \frac{1}{n^{2}} \right),\mathrm{\ \ \ \ n > 2.}\)
 
 \item
+Для даного натурального числа $n<50$ обчисліть значення субфакторіалу \(!n \) по формулі:
+
+\( !n = n! \cdot \left( 1 - \frac{1}{1!} +\frac{1}{2!} -\ldots + \frac{(-1)^{n}}{n!} \right) \)
+
+\item
   Скласти програму друку таблиці значень функції \(y = \sin x\) на
   відрізку {[}0,1{]} з кроком \(h = 0.1\).
 \item
@@ -1107,6 +1112,16 @@ y_{i},\textup{ при }\left| y_{i} \right| \leq 2, \\
 Приклади: 1260 = 21 * 60, 1827 = 21 * 87, 2187 = 27 * 81.
 
 Напишіть програму, яка знайде всі 4-значні числа вампірів. 
+
+
+\item Таксі Рамануджана. С. Рамануджан був індійським математиком, який прославився своєю інтуїцією щодо чисел.
+ Коли одного разу англійський математик Г. Х. Харді приїхав до нього в госпіталь, Харді зауважив, що номер його таксі - 1729,
+ досить нудне число. На що Рамануджан відповів: "Ні, Харді! Ні, Харді! Це дуже цікаве число.
+Це найменше число, яке можна виразити як суму двох кубів двома різними способами".
+Перевірте це твердження, написавши програму Ramanujan.java, яка приймає цілий аргумент командного рядка $n$ і друкує всі цілі числа,
+ менші або рівні $n$, які можна виразити як суму двох кубів двома різними способами - знайдіть різні додатні цілі числа a, b, c і d такі,
+ що $a^{3} + b^{3} = c^{3} + d^{3}$. 
+Тепер номер 87539319 здається досить нудним номером. Визначте, чому це не так.
 
 \end{enumerate}
 
@@ -1383,7 +1398,7 @@ $u,v$ -- задані дійсні числа;
 \item
 \(y = \arcsin (x) = x + \frac{1}{2}\frac{x^{3}}{3!} + \frac{1*3}{2*4}\frac{x^{5}}{5!} + \ldots,(\left| x \right| < 1)\);
 \item
-\(y = \Phi (x) = \int\limits_{0}^{x} e^{-x^{2}} dx = x - \frac{x^{3}}{3 \cdot 1!} + \frac{ x^{5}}{5 \cdot 3!} + \ldots.
+\(y = \Phi (x) = \int\limits_{0}^{x} e^{-x^{2}} dx = x - \frac{x^{3}}{3 \cdot 1!} + \frac{ x^{5}}{5 \cdot 3!} + \ldots \).
 
 \end{enumerate}
 
@@ -1488,266 +1503,143 @@ $a_{k+1} = \frac{a_{k} + b_{k}}{2}$, $b_{k+1} = \sqrt{a_{k}\cdot b_{k}}$,
 $t_{k+1} = t_{k} - p_{k}(a_{k}-a_{k+1})$, $p_{k+1} =2p_{k}$.
 
 
-\item Таксі Рамануджана. С. Рамануджан був індійським математиком, який прославився своєю інтуїцією щодо чисел.
- Коли одного разу англійський математик Г. Х. Харді приїхав до нього в госпіталь, Харді зауважив, що номер його таксі - 1729,
- досить нудне число. На що Рамануджан відповів: "Ні, Харді! Ні, Харді! Це дуже цікаве число.
-Це найменше число, яке можна виразити як суму двох кубів двома різними способами".
-Перевірте це твердження, написавши програму Ramanujan.java, яка приймає цілий аргумент командного рядка $n$ і друкує всі цілі числа,
- менші або рівні $n$, які можна виразити як суму двох кубів двома різними способами - знайдіть різні додатні цілі числа a, b, c і d такі,
- що $a^{3} + b^{3} = c^{3} + d^{3}$. 
-Тепер номер 87539319 здається досить нудним номером. Визначте, чому це не так.
+
 
 
 \item
+Двадцять питань.
+ Напишіть програму, яка виводить 20 запитань:
+ користувач задумує число від 1 до мільйона, а комп’ютер здогадується, яке число запитуючи користувач задачючи питання:
+Більше чи менше чи дорівнює воно якомусь числу.
+Використовуйте двійковий пошук, щоб переконатися, що комп’ютеру потрібно не більше 20 відгадок.
 
-Несколько идущих подряд одинаковых чисел в массиве сворачиваются в одно число на 1 большее исходного.
 
-Пример: 1 1 1 4 превратится в 2 4, так как 1 1 1 свернется в 2. 
-
-Массив подвергается свертке до тех пор, пока в нем находятся повторяющиеся подряд числа.
-
-Свертка производится всегда с левого края и как только самая левая последовательность до конца свернута, можно приступать к следующим числам. Например: 1 1 2 2 3 -> 2 2 2 3 -> 3 3 -> 4
-
-На вход программа получает в первой строке число N - длина массива
-
-Со следующей строки следует  N целых чисел - элементы массива.
-
-Необходимо вывести свернутый массив.
-
-\item
-В массивах монотонный отрезок - это несколько подряд идущих элементов, выстроенных либо по не возрастанию, либо по не убыванию. Например: массив 1 3 2 5 6 7 3 2 1 1 1, имеет монотонные отрезки: 1 3, 2 5 6 7, 7 3 2 1 1 1.
-
-Задача заключается в выводе всех монотонных отрезков максимальной длины. Для примера выше: такой отрезок всего один длиной 6: 7 3 2 1 1 1, а в примере 1 2 1 2 1 2: таких отрезов 1 2, 2 1, 1 2,  2 1, 1 2, аж целых 5.
-
-Будьте внимательны, необходимо учитывать оба порядка!
-
-На вход программа получает в первой строке длину массива, далее следуют элементы массива.
-
-Выведите все отрезки, каждый с новой строки
-
-ПС: никакие динамические массивы тут не нужны!
-
-Внимание: подумайте, что выводить в тесте 5, 1 1 1 1 1
+\item Напишіть програму, яка приймає аргумент командного рядка $p$,
+зчитує дійсні числа зі стандартного вводу та роздруковує їх $p$-норму, 
+де $p$-норма вектора $(x_{1}, ..., x_{N})$  $p$ з $(|x_{1}|^{p} + |x_{2}|^{p} + \ldots + | x_{N}|^{p})$.
 
 
 \item
-Программа получает на вход длину ёлки.
+Декілька однакових чисел в масиві, що йдуть одне за одним згортаються в одне число, яке є на одиницю більше за початкове.
 
-Программа должна напечатать ёлку.
+Приклад: 1 1 1 4 перетвориться в 2 4, так як 1 1 1 згорнеться в 2.
 
-Sample Input 1:
+Масив піддається згортці допоки в ньому знаходяться повторювані поспіль числа.
+
+Згортка проводиться завжди з лівого краю і як тільки найлівіша послідовність до кінця згорнута,
+можна приступати до наступних чисел. Наприклад: 1 1 2 2 3 -> 2 2 2 3 -> 3 3 -> 4
+
+На вхід програма отримує: в першому рядку число N - довжина масиву
+
+В наступному рядку N цілих чисел - елементи масиву.
+
+Необхідно вивести згорнутий масив.
+
+\item
+
+У масивах монотонний відрізок - це кілька поспіль елементів які зростають, або спадають.
+Наприклад: масив -1 3 2 5 6 7 3 2 1 1 1 має монотонні відрізки: -1 3, 2 5 6 7, 7 3 2 1, 1, 1.
+
+Завдання полягає у виведенні всіх монотонних відрізків максимальної довжини.
+Для прикладу вище: такий відрізок всього один довжиною 4: 7 3 2 1, а в
+прикладі 1 2 1 2 1 таких відрізків 4: 1 2, 2 1, 1 2, 2 1
+
+Необхідно враховувати обидва порядки!
+
+На вхід програма отримує в першому рядку довжину масиву, далі йдуть елементи масиву.
+
+Виведіть всі відрізки, кожен з нового рядка.
+
+\item
+Програма отримує на вхід довжину ялинки.
+
+Програма повинна надрукувати ялинку.
+Sample Input 1:\\
 
 3
 
 Sample Output 1:
 
-..*..
-.***.
-*****
+..*..\\
+.***.\\
+*****\\
 
-Sample Input 2:
+Sample Input 2:\\
 
 4
 
 Sample Output 2:
 
-...*...
-..***..
-.*****.
-*******
+...*...\\
+..***..\\
+.*****.\\
 
 
-\item
-На вход подается длина массива и массив из 0 и 1.
+На вхід подається довжина масиву та масив з 0 та 1.
 
-Например:
+Приклад:
 
 4
 
 1 1 0 0
 
-1 - подъем(/), 0 - спуск (\)
+1  - підйом(\slash), 0 - спуск (\textbackslash)
 
-В данном примере нужно вывести горный массив:
+В даному прикладі треба вивести горний масив:
 
-./\.
+\_\slash \textbackslash\_ \\
+\slash\_\_\textbackslash\\
 
-/..\
-
-Гарантируется, что последовательность 0 и 1 образует корректный горный массив)
-
+Гарантується, що послідовність 0 та 1 утворює коректний горний масив.
 \item
-Спираль на каждом повороте увеличивает длину прямого куска на 1, начальная длина - 2, начальное направление - вверх, повороты только направо.
+Спіраль на кожному повороті збільшує довжину прямого шляху на 1, початкова довжина - 2,
+початковий напрямок - вгору, повороти лише направо.
 
-*....
-*....
-*.***
-*.*.*
-*...*
-*****
+YYYYY\\
+YXXXX\\
+YXYYY\\
+YXYXY\\
+YXXXY\\
+YYYYY\\
+Дано число: кількість Y спіралі, які необхідно вивести.
 
-Дано число: количество звездочек спирали, которые необходимо вывести.
-
-Выведите спираль, заполнив пустые места точками.
-
-\item
-Rewrite the function below so there are no looping constructs (for, while) within the function's body. Make sure your function is pure.
-
-def meanAge(records):
-  ageRecs = 0
-  ageTotal = 0
-
-  for r in records:
-    if 'age' in r.keys():
-      ageRecs += 1
-      ageTotal += r['age']
-
-  if ageRecs:
-   avg = ageTotal / ageRecs
-   return avg
+Виведіть спіраль, заповнивши порожні місця точками.
 
 
-Expected behaviour:
+\item Контрольні суми.
+Міжнародний стандартний номер книги (ISBN) - це 10 -значний код, який однозначно визначає книгу.
+Крайня права цифра - це цифра контрольної суми, яку можна однозначно визначити з інших 9 цифр за умови,
+що $d_{1} + 2*d_{2} + 3*d_{3} + \ldots + 10*d_{10}$ має бути кратним 11 (тут $d_{i}$ позначає $i$-ту цифру справа).
+ Цифра контрольної суми $d_1$ може бути будь -яким значенням від 0 до 10:
+за умовою ISBN використовується значення X для позначення 10.
+Приклад: цифра контрольної суми, що відповідає 020131452, дорівнює 5, оскільки це єдине значення $d_1$ від 0 до 10,
+для якого $d_1 + 2*2 + 3*5 + 4*4 + 5*1 + 6*3 + 7*1 + 8*0 + 9*2 + 10*0$ кратно 11.
+ Напишіть програму ISBN.java, що приймає 9-значне ціле число як аргумент командного рядка, обчислює контрольну суму та
+ друкує 10-значний номер ISBN. Це нормально, якщо ви не надрукуєте жодних нулів.
 
-kids = \
-(
-  {'id' : 1, 'name' : 'Ada', 'age' : 8, 'height': 4.52, 'fond_of' : '''Computers'''},
-  {'id' : 2, 'name' : 'Blaise', 'age' : 7, 'height': 4.28, 'fond_of' : '''Tabletop Games'''},
-  {'id' : 3, 'name' : 'Carl', 'age' : 6, 'height': 4.73, 'fond_of' : '''Maps'''},
-  {'id' : 4, 'name' : 'David', 'height': 4.23, 'fond_of' : '''Puzzles'''},
-  {'id' : 5, 'name' : 'Evariste', 'age': 7, 'height': 4.56, 'fond_of' : '''Symmetric shapes'''},
-)
+\item Форматований номер ISBN.
+Напишіть програму ISBN2.java, яка зчитує 9-значне ціле число з аргументу командного рядка,
+обчислює контрольну цифру та друкує повністю відформатований номер ISBN, наприклад, 0-201-31452-5.
 
->>> meanAge(kids)
-7.0
->>> empty = []
->>> str(meanAge(empty))
-None
+\item   <200b><200b>Коди UPC. Універсальний код продукту (UPC) - це 12 -значний код, який однозначно визначає продукт.
+Найменш значуща цифра d1 (крайня права) - це контрольна цифра, яка визначається однозначно, зробивши такий вираз кратним 10:
+$(d_1 + d_3 + d_5 + d_7 + d_9 + d_{11}) + 3 (d_2 + d_4 + d_6 + d_8 + d_{10} + d_{12})$
+Наприклад, контрольна цифра, що відповідає 0-48500-00102 (Tropicana Pure Premium Arange Juice), дорівнює 8, оскільки
+(8 + 0 + 0 + 0 + 5 + 4) + 3 (2 + 1 + 0 + 0 + 8 + 0) = 50
+і 50 кратно 10.
+Напишіть програму, яка зчитує 11 -значне ціле число з параметра командного рядка,
+обчислює контрольну цифру та друкує повний UPC.
+Підказка: використовуйте змінну типу long для збереження 11 -значного числа.
 
-\item
-Write a recursive procedure that, given an amount and values available,  returns a number of ways in which this amount can be composed using these values. Use the following principle.
-
-Looking at some particular value from the pool, we may define the number of  ways to compose the given amount as the sum of:
-
-     the number of ways to compose the amount without using this value
-    the number of ways to compose (amount - value) with using this value
-
-
-Think of why it is true, define some edge-cases, implement a procedure.
-
-Expected behaviour: 
-
->>> values = (1, 2, 3, 4)
->>> makeAmount(4, values)
-5
-
-\item
-Write a function deepReverse to reverse elements of a nested list with an arbitrary level of nesting.
-
-Expected behaviour:
-
->>> deepReverse([[1, 2], [3, [4, 5]], 6])
-[6, [[5, 4], 3], [2, 1]]
-
-
-Anything that is not a list is considered to be an element and thus should not be changed.
-
->>> deepReverse(['123', '456', '789', {10: 11, 12: 13}, (14, 15)])
-[(14, 15), {10: 11, 12: 13}, '789', '456', '123']
-
-
-If the function receives an element straight away, this element should be returned as it is.
-
->>> deepReverse(42)
-42
-
-\item
-
-Write a function to flatten a nested dictionary by joining the keys with a dot
-
-Expected behaviour:
-
->>> flatten({'a': 1, 'b': {'1': 2, '2': 3}, 'c': 4})
-{'a': 1, 'b.1': 2, 'b.2': 3, 'c': 4}
-
-d = {'alpha': 
-      {'beta': 
-        {'gamma': 
-          {'delta': 
-            {'epsilon': 
-              {'zeta': 
-                {'eta': 
-                  {'theta': 
-                    {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8}}}}}}}}}
-                    
->>> for k, v in sorted(flatten(d).items()): 
-... print(k, ' : ', v) 
-
-alpha.beta.gamma.delta.epsilon.zeta.eta.theta.a : 1
-alpha.beta.gamma.delta.epsilon.zeta.eta.theta.b : 2
-alpha.beta.gamma.delta.epsilon.zeta.eta.theta.c : 3
-alpha.beta.gamma.delta.epsilon.zeta.eta.theta.d : 4
-alpha.beta.gamma.delta.epsilon.zeta.eta.theta.e : 5
-alpha.beta.gamma.delta.epsilon.zeta.eta.theta.f : 6
-alpha.beta.gamma.delta.epsilon.zeta.eta.theta.g : 7
-alpha.beta.gamma.delta.epsilon.zeta.eta.theta.h : 8
-
-
-Assume that all keys at all levels of nesting are strings that don't contain dot symbols.
-You may want to look at the dictionary comprehensions.
-
-\item
-Implement a SwitchDict class that inherits from the original dict class but has one additional method: petrify. Petrify will return an immutable version of the dict object on which the method was called. In order to do that, implement the immutable dictionary class and call it ImDict. ImDict should inerit from the dict class but an attempt to use any method that may mutate the original object of ImDict class should raise a type error with the following message: 'objects of type ImDict are immutable'
-
-Expected behaviour:
-
->>> sd = SwitchDict([(1, 2), (2, 1)])
->>> sd
-{1: 2, 2: 1}
-
->>> fd = sd.petrify()
->>> fd
-{1: 2, 2: 1}
-
->>> type(sd)
-<class '__main__.SwitchDict'>
->>> type(fd)
-<class '__main__.ImDict'>
-
->>> fd[1] = 0
-TypeError: objects of type ImDict are immutable
-
-
-Methods that may worry you: clear, update, setdefault, pop, popitem and also setting and removing items
-\item
-
-
-Make a bucket(<...>) parameterized decorator
-
-The decorator accepts any number of arguments, both positional and keyword, the type does not matter. When the decorated function is called, its result is printed to the standard output along with the decorator arguments in the following format:
-
-(<tuple of positional decorator arguments>, <dictionary of keyword decorator arguments>, <function's returned value>)
-
- 
-
-Expected behaviour:
-
-@bucket(1, 2, 3, [1, 2, 3], 'one', 'two', 'three', one = 1, two = 2, three = 3)
-def id(x):
-  return x
-
->>> id(42)
-((1, 2, 3, [1, 2, 3], 'one', 'two', 'three'), {'two': 2, 'one': 1, 'three': 3}, 42)
-
-
-
-@bucket()
-def id2(x):
-  return x
-
->>> id2(42)
-((), {}, 42)
-
+\item Внесення змін. Напишіть програму, яка зчитує в командному рядку ціле число N (кількість пенні) і друкує найкращий спосіб
+(найменша кількість монет) для нарахування даноъ суми за допомогою монет (лише 1,25, 10 та 50 копійок).
+Наприклад, якщо N = 73, надрукуйте
+\begin{itemize}
+\item  50 коп
+\item  10 коп * 2
+\item  1 коп * 3
+\end{itemize}
+Підказка: використовуйте жадібний алгоритм. 
 
 
 \end{enumerate}
@@ -6707,7 +6599,7 @@ transform (), яка виконує перетворення лише на об'
 Порівняйте роботу функцій sort(), partial\_sort() та nth\_element() один
 проти одного і з'ясуйте, чи дійсно варто використовувати одне із слабких
 сортувань, коли вони можуть спрацювати коректно.
-\end{quote}
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -6846,34 +6738,36 @@ transform (), яка виконує перетворення лише на об'
 
 Послідовність r буде імітувати рівномірно розподілені в інтервалі (0, 1)
 випадкові числа, якщо:
-
-а) \({m = 2}^{n}\), де k --- натуральне число;
-
-б) при діленні числа \(a\) на 8 --- остаток дорівнює 5. Крім того,
+\begin{itemize}
+\item
+ \({m = 2}^{n}\), де k --- натуральне число;
+\item
+ при діленні числа \(a\) на 8 --- остаток дорівнює 5. Крім того,
 \(\sqrt{m} < a < m - \sqrt{m}\);
-
-в) Число с --- непарне, при цьому бажано щоб
+\item
+ Число с --- непарне, при цьому бажано щоб
 \(\frac{s}{m} \approx 0.5 - \frac{\sqrt{3}}{6}\);
-
-г) Число s0 можна обрати довільно в діапазоні від 0 до m-1.
+\item
+ Число s0 можна обрати довільно в діапазоні від 0 до m-1.
+\end{itemize}
 
 Завдання:
-
-а) Створити функцію, що буде генерувати числа а, с, m, s0, що
+ \begin{enumerate}[label=\xslalph*)]
+ \item 
+ Створити функцію, що буде генерувати числа а, с, m, s0, що
 задовольняють вказаним умовам
-
-б) створити на базі цієї послідовності генератор випадкових цілих чисел
+ \item 
+ створити на базі цієї послідовності генератор випадкових цілих чисел
 та генератор випадкових дійсних чисел
-
-в) створити цей генератор таким чином, щоб він генерував майже завжди
+\item
+ створити цей генератор таким чином, щоб він генерував майже завжди
 різні числа при першому виклику (визначайте нове s0) та враховував
 попередні виклики при нових викликах (використовуйте статичні глобальні
 змінні та хеш часу)
-
-г) Отримайте цим датчиком 1000 чисел та оцінить рівномірність розподілу:
+\item Отримайте цим датчиком 1000 чисел та оцінить рівномірність розподілу:
 розбийте інтервал (0, 1) на N інтервалів рівної довжини та знайдіть
 варіацію серед чисел, що туди потрапили.
-
+\end{enumerate}
 Описані методи повинні бути описаними в заголовочному файлі на Сі та як
 методи класу на Сі++(клас відповідно містить приватні члени для а, с, m,
 s0). В тестовий програмі перевірте зокрема коректність ГВЧ за критерієм
@@ -6892,86 +6786,88 @@ Random-2
 Послідовність r\_i буде імітувати рівномірно розподілені в інтервалі (0,
 1) випадкові числа, якщо:
 
+\begin{itemize}
+\item
 \({m = 2}^{n}\), де k --- натуральне число;
-
+\item
 c та m --- взаємно прості числа;
-
+\item
 (a-1) ділиться на всі прості числа p, що є дільниками m;
-
+\item
 b*(a-1) ділиться на 4, якщо m ділиться на 4.
-
+\end{itemize}
 Завдання:
-
-а) Створити функцію, що буде генерувати числа а, с, m, s0, що
+ \begin{enumerate}[label=\xslalph*)]
+ \item 
+ Створити функцію, що буде генерувати числа а, с, m, s0, що
 задовольняють вказаним умовам
-
-б) створити на базі цієї послідовності генератори випадкових цілих чисел
+\item
+ створити на базі цієї послідовності генератори випадкових цілих чисел
 та генератор випадкових дійсних чисел
-
-в) створити цей генератор таким чином, щоб він генерував майже завжди
+\item
+ створити цей генератор таким чином, щоб він генерував майже завжди
 різні числа при першому виклику (визначайте нове s0) та враховував
 попередні виклики при нових викликах (використайте статичний член
 структури або класу та хеш часу)
-
-г) на базі даного ГВЧ створить метод, що генерує n-вимірні випадкові
+\item
+ на базі даного ГВЧ створить метод, що генерує n-вимірні випадкові
 вектори дійсних чисел, кожні дві координати яких є некорельовані.
-
+\item
 Напишіть код, який перевіряє на достатньо великій вибірці, що вони
 дійсно некорельовані.
+\end{enumerate}
 
-д) На базі методу Монте-Карло підрахуйте об``єм n-вимірної сфери.
-
+\item
+ На базі методу Монте-Карло підрахуйте об``єм n-вимірної сфери.
+\item
 За допомогою ГВЧ отримати:
-
-ж) 10 натуральних чисел, що більше 20;
-
-з) n цілих чисел в діапазоні -150, 150;
-
-и) n не­відємних дійсних чисел, менших 3.14;
-
-й) 15 чисел, серед яких 7 двійок та 8 трійок;
-
-к) перестановку чисел 1, ..., 12, тобто послідовність чисел р1, ...,
+\begin{enumerate}[label=\xslalph*)]
+\item 10 натуральних чисел, що більше 20;
+\item n цілих чисел в діапазоні -150, 150;
+\item n не­відємних дійсних чисел, менших 3.14;
+\item 15 чисел, серед яких 7 двійок та 8 трійок;
+\item перестановку чисел 1, ..., 12, тобто послідовність чисел р1, ...,
 р12, в яку входить кожне з чисел 1, ..., 12;
+\item 28 малих латинських літер;
+\item 15 великих латинських літер без повторів
+\end{enumerate}
 
-л) 28 малих латинських літер;
-
-м) 15 великих латинських літер без повторів
-
+\item
 Використовуючи розподіли зі стандартної бібліотеки Сі++:
-
-а) Побудувати 100 перших членів випадкової послідовності з нулів і
+\begin{enumerate}[label=\xslalph*)]
+\item
+ Побудувати 100 перших членів випадкової послідовності з нулів і
 одиниць, в яких нуль і одиниця рівноймовірні, тобто послідовності з
 розподілом ( 0.5, 0.5)
 
-б) Побудувати 100 перших членів випадкової послідовності з цифр 1, 2, 3,
+\item Побудувати 100 перших членів випадкової послідовності з цифр 1, 2, 3,
 4, 5, 6, в який всі ці цифри рівноймовірні.
 
-в) Побудувати 100 перших членів випадкової послідовності з нулів и
+\item Побудувати 100 перших членів випадкової послідовності з нулів и
 одиниць, в який нуль зустрічається з ймовірністю 1/4, а одиниця з
 імовірністю 3/4,
 
-г) Побудувати 100 перших членів випадкової послідовності слів «камінь»,
+\item Побудувати 100 перших членів випадкової послідовності слів «камінь»,
 «ножиці», «бумага», в який ці три слова равноімовірні.
 
-д) Побудувати 100 перших членів випадкової послідовності слів «камінь»,
+\item Побудувати 100 перших членів випадкової послідовності слів «камінь»,
 «ножиці», «бумага», в який слово «камінь» зустрічається з ймовірністю
 1/3, слово «ножиці»--- з ймовірністю 1/2, слово «бумага»---с ймовірністю
 1/6.
+\end{enumerate}
 
 \item
 Побудувати послідовність випадкових величин, що задовольняються
 розподілу:
+\begin{enumerate}[label=\xslalph*)]
+\item Пуасона
+\item Гауса
+\item експоненційного
+\item Стьюдента
+\item Фішера
+\end{enumerate}
 
-а) Пуасона
-
-б) Гауса
-
-в) експоненційного
-
-г) Стьюдента
-
-д) Фішера
+\item Виконайте попереднэ завдання використовуючы лише генератор з рівномірним розподілом.
 
 \item
 Використовуйте srand для створення 100 чисел. (Розмір чисел не має
@@ -7019,11 +6915,13 @@ b*(a-1) ділиться на 4, якщо m ділиться на 4.
 використовуючи кожну з двох стратегій (перемикання чи не перемикання) і надрукувати шанс на успіх для кожної стратегії.
 Або ви можете пограти в гру тут.
 
+\end{enumerate}
 
 
 C++11
 
-
+\def\labelenumi{\arabic{enumi}.}
+\item
 
 По аналогии с функцией printf с предыдущего степа напишите функцию print\_values с переменным числом аргументов, которая для каждого аргумента выводит его тип и значение в поток std::ostream, который ей передан в качестве первого аргумента. Функция должна работать с произвольным числом аргументов.
 Указание: для вывода имени типа нужно использовать std::type\_info::name.
@@ -7043,7 +6941,7 @@ PKc: Hello
 Внимание: выводить нужно в поток os, а не в std::cout!
 
 
-
+\item
 
 Дополните класс Array перемещающим конструктором и перемещающим оператором присваивания.
 
@@ -7241,7 +7139,7 @@ string c3 = from_string<string>(s3); // c3 = "abc"
     Не забудьте определить конструктор bad\_from\_string от char const * или от std::string.
 
 
-
+\item
 Специфицируйте noexcept для шаблонной функции do\_math, если известно, что в её реализации значения типа T копируются,  присваиваются и складываются при помощи оператора +.
 
 Для простоты будем считать, что перемещающих методов у типа T нет.
@@ -7254,6 +7152,175 @@ bool b2 = noexcept(do_math<std::string>()); // false
 \end{verbatim}
 
 Hint: в данном задании вполне можно обойтись std::declval<T>(), но при желании можно так же заглянуть в библиотеку поддержки типов и найти там подходящую проверку.
+\end{enumerate}
+
+Функціональне програмування
+\def\labelenumi{\arabic{enumi}.}
+\item
+
+\item
+Rewrite the function below so there are no looping constructs (for, while) within the function's body. Make sure your function is pure.
+
+
+\begin{verbatim}
+def meanAge(records):
+  ageRecs = 0
+  ageTotal = 0
+
+  for r in records:
+    if 'age' in r.keys():
+      ageRecs += 1
+      ageTotal += r['age']
+
+  if ageRecs:
+   avg = ageTotal / ageRecs
+   return avg
+\end{verbatim}
+
+Expected behaviour:
+\begin{verbatim}
+kids = \
+(
+  {'id' : 1, 'name' : 'Ada', 'age' : 8, 'height': 4.52, 'fond_of' : '''Computers'''},
+  {'id' : 2, 'name' : 'Blaise', 'age' : 7, 'height': 4.28, 'fond_of' : '''Tabletop Games'''},
+  {'id' : 3, 'name' : 'Carl', 'age' : 6, 'height': 4.73, 'fond_of' : '''Maps'''},
+  {'id' : 4, 'name' : 'David', 'height': 4.23, 'fond_of' : '''Puzzles'''},
+  {'id' : 5, 'name' : 'Evariste', 'age': 7, 'height': 4.56, 'fond_of' : '''Symmetric shapes'''},
+)
+
+>>> meanAge(kids)
+7.0
+>>> empty = []
+>>> str(meanAge(empty))
+None
+\end{verbatim}
+\item
+Write a recursive procedure that, given an amount and values available,  returns a number of ways in which this amount can be composed using these values. Use the following principle.
+
+Looking at some particular value from the pool, we may define the number of  ways to compose the given amount as the sum of:
+
+     the number of ways to compose the amount without using this value
+    the number of ways to compose (amount - value) with using this value
+
+
+Think of why it is true, define some edge-cases, implement a procedure.
+
+Expected behaviour: 
+\begin{verbatim}
+>>> values = (1, 2, 3, 4)
+>>> makeAmount(4, values)
+5
+\end{verbatim}
+\item
+Write a function deepReverse to reverse elements of a nested list with an arbitrary level of nesting.
+
+Expected behaviour:
+\begin{verbatim}
+>>> deepReverse([[1, 2], [3, [4, 5]], 6])
+[6, [[5, 4], 3], [2, 1]]
+
+
+Anything that is not a list is considered to be an element and thus should not be changed.
+\begin{verbatim}
+>>> deepReverse(['123', '456', '789', {10: 11, 12: 13}, (14, 15)])
+[(14, 15), {10: 11, 12: 13}, '789', '456', '123']
+\end{verbatim}
+
+If the function receives an element straight away, this element should be returned as it is.
+\begin{verbatim}
+>>> deepReverse(42)
+42
+\end{verbatim}
+\item
+
+Write a function to flatten a nested dictionary by joining the keys with a dot
+
+Expected behaviour:
+\begin{verbatim}
+>>> flatten({'a': 1, 'b': {'1': 2, '2': 3}, 'c': 4})
+{'a': 1, 'b.1': 2, 'b.2': 3, 'c': 4}
+
+d = {'alpha': 
+      {'beta': 
+        {'gamma': 
+          {'delta': 
+            {'epsilon': 
+              {'zeta': 
+                {'eta': 
+                  {'theta': 
+                    {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8}}}}}}}}}
+                    
+>>> for k, v in sorted(flatten(d).items()): 
+... print(k, ' : ', v) 
+
+alpha.beta.gamma.delta.epsilon.zeta.eta.theta.a : 1
+alpha.beta.gamma.delta.epsilon.zeta.eta.theta.b : 2
+alpha.beta.gamma.delta.epsilon.zeta.eta.theta.c : 3
+alpha.beta.gamma.delta.epsilon.zeta.eta.theta.d : 4
+alpha.beta.gamma.delta.epsilon.zeta.eta.theta.e : 5
+alpha.beta.gamma.delta.epsilon.zeta.eta.theta.f : 6
+alpha.beta.gamma.delta.epsilon.zeta.eta.theta.g : 7
+alpha.beta.gamma.delta.epsilon.zeta.eta.theta.h : 8
+\end{verbatim}
+
+Assume that all keys at all levels of nesting are strings that don't contain dot symbols.
+You may want to look at the dictionary comprehensions.
+
+\item
+Implement a SwitchDict class that inherits from the original dict class but has one additional method: petrify. Petrify will return an immutable version of the dict object on which the method was called. In order to do that, implement the immutable dictionary class and call it ImDict. ImDict should inerit from the dict class but an attempt to use any method that may mutate the original object of ImDict class should raise a type error with the following message: 'objects of type ImDict are immutable'
+
+Expected behaviour:
+\begin{verbatim}
+>>> sd = SwitchDict([(1, 2), (2, 1)])
+>>> sd
+{1: 2, 2: 1}
+
+>>> fd = sd.petrify()
+>>> fd
+{1: 2, 2: 1}
+
+>>> type(sd)
+<class '__main__.SwitchDict'>
+>>> type(fd)
+<class '__main__.ImDict'>
+
+>>> fd[1] = 0
+TypeError: objects of type ImDict are immutable
+\end{verbatim}
+
+Methods that may worry you: clear, update, setdefault, pop, popitem and also setting and removing items
+\item
+
+
+Make a bucket(<...>) parameterized decorator
+
+The decorator accepts any number of arguments, both positional and keyword, the type does not matter. When the decorated function is called, its result is printed to the standard output along with the decorator arguments in the following format:
+
+(<tuple of positional decorator arguments>, <dictionary of keyword decorator arguments>, <function's returned value>)
+
+ 
+
+Expected behaviour:
+\begin{verbatim}
+@bucket(1, 2, 3, [1, 2, 3], 'one', 'two', 'three', one = 1, two = 2, three = 3)
+def id(x):
+  return x
+
+>>> id(42)
+((1, 2, 3, [1, 2, 3], 'one', 'two', 'three'), {'two': 2, 'one': 1, 'three': 3}, 42)
+
+
+
+@bucket()
+def id2(x):
+  return x
+
+>>> id2(42)
+((), {}, 42)
+\end{verbatim}
+
+
+\end{enumerate}
 
 
 Олімпіадні задачи
@@ -7360,7 +7427,7 @@ id учасника, кількість квитків, бажана сума в
 5) x\^{}10000+x+1 - результат: 10000*x\^{}9999+1
 
 Розв'яжить цю задачу якщо замість х може бути будь-який ідентифікатор.
-\end{quote}
+
 
 
 Дані вводяться з клавіатури або з файлу input.txt, виводяться на екран або у файл output.txt.
@@ -7926,11 +7993,11 @@ Min время, сек	0.028
 
 
 Задание 10. Алгоритмы обработки данных
-1. Закраска прямой. На числовой прямой окрасили N отрезков. Известны координаты левого и правого концов каждого отрезка ( L_i и R_i ). Найти длину окрашенной части числовой прямой.
+1. Закраска прямой. На числовой прямой окрасили N отрезков. Известны координаты левого и правого концов каждого отрезка ( $L_i$ и $R_i$ ). Найти длину окрашенной части числовой прямой.
 
-Ограничения: L_i и R_i – целые, -1 000 000 000 \leq L_i \leq R_i \leq 1 000 000 000, 1 \leq N \leq 15 000, время 1 с.
+Ограничения: $L_i$ и $R_i$ – целые, $-1 000 000 000 \leq L_i \leq R_i \leq 1 000 000 000$, $1 \leq N \leq 15 000$, время 1 с.
 
-Ввод из файла cover.in. В первой строке находится число N, в следующих N строках – пары L_i и R_i.
+Ввод из файла cover.in. В первой строке находится число N, в следующих N строках – пары $L_i$ и $R_i$.
 
 Вывод в файл cover.out. Вывести одно число – длину окрашенной части прямой.
 
@@ -7938,9 +8005,9 @@ Min время, сек	0.028
 
 
 
-2. Сумма произведений. Дан набор переменных х_1, х_2, \ldots , x_N. Каждая переменная х_i может принимать значение только -1, 0 или +1. Для данного целого числа S требуется определить количество способов присвоить переменным х_i значения так, чтобы сумма всех возможных произведений хi хj была равна S, где i < j и i, j = 1, 2, \ldots, N. Два способа считаются различными, если они содержат различное число х_i = 0.
+2. Сумма произведений. Дан набор переменных $х_1, х_2, \ldots , x_N$. Каждая переменная $х_i$ может принимать значение только -1, 0 или +1. Для данного целого числа S требуется определить количество способов присвоить переменным $х_i$ значения так, чтобы сумма всех возможных произведений $х_i х_j$ была равна S, где $i < j$ и $i, j = 1, 2, \ldots, N$. Два способа считаются различными, если они содержат различное число $х_i = 0$.
 
-Ограничения: 2 \leq N \leq 10 000, -10 000 \leq S \leq 10 000, время 1 с.
+Ограничения: $2 \leq N \leq 10 000$, $-10 000 \leq S \leq 10 000$, время 1 с.
 
 Ввод из файла prodsum.in. В первой строке находятся числа N и S, разделенные пробелом.
 
