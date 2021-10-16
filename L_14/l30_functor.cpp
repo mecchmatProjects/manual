@@ -30,7 +30,7 @@ int main(){
      std::cout<<arr[i]<<",";
   std::cout<<"\n";  
   
-  // Створення обэкту класу Increment
+  // Створення обєкту класу Increment
   Increment obj(to_add); 
   // виклики оператору ()
   std::transform(arr2.begin(), arr2.end(), arr2.begin(), obj); 

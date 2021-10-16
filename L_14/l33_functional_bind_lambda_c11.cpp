@@ -19,7 +19,6 @@ struct B {
 std::function<double(double)> derivative(const std::function<double(double)> &f, const double h){
 
   return [=](double x)->double { return (f(x+h)-f(x-h))/2/h; };
-
 }
 
 
@@ -49,5 +48,4 @@ int main(){
     // рахуємо піхідну функції як функцію
     std::function<double(double)> fd = [](double x)->double{ return x*x; } ;
     std::cout<<derivative(fd,0.001)(2.0);
-
 }
