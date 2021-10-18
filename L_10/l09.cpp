@@ -4,18 +4,18 @@
 #include <string>
 #include <exception>
 
-int file_processing(std::string full_path){
-   std::fstream file(full_path.c_str(), std::ios::binary);
+int file_processing(std::string full_path) throw (int,std::runtime_error, const char*) {
+   std::ifstream file(full_path.c_str(), std::ifstream::binary);
    if(file.is_open()) {
         int magic_number = 0;
-       
-        int res = file.read((char *)&magic_number, sizeof(magic_number));
-        if(res!=4){
-           throw "error";
+        file.read((char*)&magic_number, sizeof(magic_number));
+        if(magic_number==0){
+           throw "error: no data";
         }
-           
+
         if(magic_number!=42) throw magic_number;
         // some code 
+        file.close();   
     } else {
         throw std::runtime_error("Unable to open file `" + full_path + "`!");
     }
@@ -41,4 +41,6 @@ int main(int argc, char **argv)
 
 /*
 Unable to open file `1.txt`!
+can't read 1 number!
+a=668468 is not magic!
 */

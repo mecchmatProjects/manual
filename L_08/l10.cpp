@@ -1,30 +1,28 @@
 #include <iostream>
-using namespace std;
  
-class Line {
+class Number {
    public: // декларація членів та методів
-      double length;
-      void setLength( double len );
-      double getLength( void );
+      float number;
+      void setNumber(float x);
+      float getNumber();
 };
  
 // Визначення  методів
-double Line::getLength(void) {
-   return length ;
+float Number::getNumber() {
+   return number;
 }
  
-void Line::setLength( double len) {
-   length = len;
+void Number::setNumber(float x) {
+   number = x;
 }
  
 int main() {
-   Line line;
-   // встановити довжину за допомогою публічного  методу
-   line.setLength(6.0);
-   cout << "Length of line : " << line.getLength() <<endl;
+   Number x;
+   // встановити число за допомогою публічного  методу
+   x.setNumber(5.0f);
+   std::cout << "Number: " << x.getNumber() <<"\n";
  
-   // встановити довжину за допомогою доступу до публічного члену
-   line.length = 10.0; // OK: because length is public
-   cout << "Length of line : " << line.length <<endl;
-   return 0;
+   // встановити число за допомогою доступу до публічного члену
+   x.number = 11.0f; // OK: because number is public
+   std::cout << "Number is: " << x.number <<"\n";
 }

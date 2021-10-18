@@ -1,38 +1,36 @@
 #include <iostream>
 
-using namespace std;
-class Line {
+class Number {
    public:
-      void setLength( double len );
-      double getLength( void );
-      Line(double len);  // Це також конструктор
+      void setNumber(float x);
+      float getNumber();
+      Number(float x);  // Це також конструктор
    private:
-      double length;
+      float number;
 };
  
 // Визначення конструктора та інших функцій
-Line::Line( double len) {
-   cout << "Object is being created, length = " << len << endl;
-   length = len;
+Number::Number(float x) {
+   std::clog << "Number is being created, value = " << x << "\n";
+   number = x;
 }
-/*
-Line::Line( double len): length(len) {
-   cout << "Object is being created, length = " << len << endl;
+/* Альтернитивний варіант
+Number::Number( float x): number(x) {
+   cout << "Number is being created, number = " << x << "\n";
 }
 */
-void Line::setLength( double len ) {
-   length = len;
+void Number::setNumber(float x) {
+   number = x;
 }
-double Line::getLength( void ) {
-   return length;
+float Number::getNumber() {
+   return number;
 }
 
 int main() {
-   Line line(10.0); // виклик конструктору
-    // отиримуємо встановлену конструктором довжину
-   cout << "Length of line : " << line.getLength() <<endl;
-   // змінюємо довжину
-   line.setLength(6.0);
-   cout << "Length of line : " << line.getLength() <<endl;
-   return 0;
+   Number num(15.0f); // виклик конструктору
+    // отиримуємо встановлене конструктором значення
+   std::cout << "Value of Number : " << num.getNumber() <<"\n";
+   // змінюємо число
+   num.setNumber(4.5f);
+   std::cout << "Value of Number : " << num.getNumber() <<"\n";
 }

@@ -1,111 +1,118 @@
 
 #include <iostream>
-using namespace std;
 
-class Person{
-        //content of Person
-       virtual double getComm() {return 0;};
+class Animal{
+        //content of Animal
+       virtual double getAge() {
+           return  0;
+      }
 };
 
 
-class Employee:public Person
-{
+class Pet:public Animal{
 public:
-        Employee(string fName, string lName, double sal)
-        {
-                FirstName = fName;
-                LastName = lName;
-                salary = sal;
+        Pet(const char* p_name, int p_age, double p_weight):
+                name(p_name), age(p_age),weight(p_weight) {
         }
-        string FirstName;
-        string LastName;
-        double salary;
-        void show()        {
-                cout << "First Name: " << FirstName << " Last Name: " << LastName << " Salary: " << salary<< endl;
+
+        std::string name;
+        int age;
+        double weight;
+      
+        void show() {
+                std::cout << "Name: " << name << " age: " << age << " weight: " << weight<< "\n";
         }
-        void addBonus(double bonus)        {
-                salary += bonus;
+
+        void addYear(double added_weight){
+                age++;
+                weight += added_weight;
         }
 
 };
 
-class Manager :public Employee{
+class Cat : public Pet{
 public:
-        Manager(string fName, string lName, double sal, double comm) :Employee(fName, lName, sal)
-        {
-                Commision = comm;
+        Cat(const char* p_name, int c_age, double c_weight): 
+                                               Pet(p_name, c_age, c_weight){
+            voice = "myaw";
         }
-        double Commision;
-        double getComm()        {
-                return Commision;
+        std::string voice;
+        std::string getMurr()        {
+                return voice;
         }
+        double getAge() {
+           return  age;
+      }
 };
 
-class Clerk :public Employee{
+class Kitty : public Pet{
 public:
-        Clerk(string fName, string lName, double sal, Manager* man) :Employee(fName, lName, sal)        {
-                manager = man;
+        Kitty(const char* c_name, int c_age, double c_weight, Cat* k_mother) : Pet(c_name, c_age, c_weight){
+	    mother = k_mother; 	
         }
-        Manager* manager;
-        Manager* getManager()        {
-                return manager;
+        Cat* mother;
+        Cat* getMother()        {
+                return mother;
         }
+        double getAge() {
+           return  0.5;
+      }
 };
 
-void congratulate(Employee* emp){
-        cout << "Happy Birthday!!!" << endl;
-        emp->addBonus(200);
-        emp->show();
+void new_year(Pet* pet){
+        std::cout << "Happy New Year!!!\n";
+        pet->addYear(2.0);
+        pet->show();
 };
 
 int main(){
     //Вказівник на базовий обєкт: pointer to base class object
-    Employee* emp;
+    Pet* pussy;
     
     // Обєкти похідних класів: object of derived class
-    Manager m1("Steve", "Kent", 3000, 0.2);
-    Clerk c1("Kevin","Jones", 1000, &m1);
+    Cat m1("Murka", 3, 4.5);
+    Kitty c1("Malka",0, 1.5, &m1);
     
     // перетворення вгору: implicit upcasting
-    emp = &m1;
+    pussy = &m1;
     
     //It's ok
-    cout<<emp->FirstName<<endl;
-    cout<<emp->salary<<endl;
+    std::cout<<pussy->name<<"\n";
+    std::cout<<pussy->age<<"\n";
     
     //Помилка(переторення вгору) Fails because upcasting is used
-    //cout<<emp->getComm();
+    //std::cout<<pussy->getAge();
     
-    congratulate(&c1);
-    congratulate(&m1);
+    new_year(&c1);
+    new_year(&m1);
     
-    cout<<"Manager of "<<c1.FirstName<<" is "<<c1.getManager()->FirstName;
+    std::cout<<"Mother of "<<c1.name<<" is "<<c1.getMother()->name;
 
+  //explicit downcasting from Pet to Cat
+   Cat* m2 = (Cat*)(pussy);
 
-  //explicit downcasting from Employee to Manager
-   Manager* m2 = (Manager*)(emp);
+   Pet p1("Tom", 7, 5.6);
+   //try to cast an Pet to Cat
+   Cat* m3 = (Cat*)(&p1);
+   std::cout << m3->getAge() << "\n";
 
-    Employee e1("Peter", "Green", 1400);
-   //try to cast an employee to Manager
-    Manager* m3 = (Manager*)(&e1);
-    cout << m3->getComm() << endl;
-
-    Employee e2("Peter", "Green", 1400);
-    Manager* m4 = dynamic_cast<Manager*>(&e2);
-    if (m4)
-        cout << m4->getComm() << endl;
-     else
-        cout << "Can't  cast from Employee to Manager" << endl;
+   Pet p2("Vas'ka", 4, 4.4);
+   Cat* m4 = dynamic_cast<Cat*>(&p2);
+   if (m4)
+        std::cout << m4->getAge() << "\n";
+   else
+        std::cout << "Can't  cast from Pet to Cat\n";
 }
 
 /*
-Steve
-3000
-Happy Birthday!!!
-First Name: Kevin Last Name: Jones Salary: 1200
-Happy Birthday!!!
-First Name: Steve Last Name: Kent Salary: 3200
-Manager of Kevin is Steve0
-Can't  cast from Employee to Manager
+Murka
+3
+Happy New Year!!!
+Name: Malka age: 1 weight: 3.5
+Happy New Year!!!
+Name: Murka age: 4 weight: 6.5
+Mother of Malka is Murka0
+Can't  cast from Pet to Cat
+
 
 */

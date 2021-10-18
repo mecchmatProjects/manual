@@ -1,49 +1,47 @@
 #include <iostream>
-using namespace std;
 
-class Line {
+class Number {
    public:
-      int getLength( void );
-      Line( int len );             // конструктор
-      Line( const Line &obj);  // конструктор копіювання
-      ~Line();                     // деструктор
+      float getNumber();
+      Number(int val);             // конструктор
+      Number(const Number &obj);  // конструктор копіювання
+      ~Number();                     // деструктор
 
    private:
-      int *ptr;
+      float *ptr;
 };
 
 // Визначення методів, зокрема конструкторів та деструктору
-Line::Line(int len) {
-   cout << "Normal constructor allocating ptr" << endl;
+Number::Number(int val) {
+   std::clog << "Normal constructor allocating ptr\n";
    // виділяємо пам'ять під вказівник
-   ptr = new int;
-   *ptr = len;
+   ptr = new float;
+   *ptr = val;
 }
 
-Line::Line(const Line &obj) {
-   cout << "Copy constructor allocating ptr." << endl;
-   ptr = new int;
+Number::Number(const Number &obj) {
+   std::clog << "Copy constructor allocating ptr.\n";
+   ptr = new float;
    *ptr = *obj.ptr; // копіювання
 }
 
-Line::~Line(void) {
-   cout << "Freeing memory!" << endl;
+Number::~Number() {
+   std::clog << "Freeing memory!\n";
    delete ptr;
 }
 
-int Line::getLength( void ) {
+float Number::getNumber() {
    return *ptr;
 }
 
-void display(Line obj) {
-   cout << "Length of line : " << obj.getLength() <<endl;
+void display(Number obj) {
+   std::cout << "Number is : " << obj.getNumber() <<"\n";
 }
 
 int main() {
-   Line line1(10); // Конструктор
-  Line line2 = line1; // Це також конструктор- копіювання
-   display(line1);
-   display(line2);
-   return 0;
+  Number n1(10); // Конструктор
+  Number n2 = n1; // Це також конструктор- копіювання
+  display(n1);
+  display(n2);
 }
 

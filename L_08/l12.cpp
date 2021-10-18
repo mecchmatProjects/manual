@@ -1,30 +1,28 @@
 #include <iostream>
-using namespace std;
  
-class Line {
+class Number {
    public:
-      void setLength( double len );
-      double getLength( void );
-      Line();  // Це конструктор
+      void setNumber(float x);
+      double getNumber();
+      Number();  // Це конструктор
    private:
-      double length;
+      double number;
 };
  
 // Визначимо якусь дію всередині конструктора
-Line::Line(void) {
-   cout << "Object is being created" << endl;
+Number::Number() {
+   std::clog << "Number is being created\n";
 }
-void Line::setLength( double len ) {
-   length = len;
+void Number::setNumber( float len ) {
+   number = len;
 }
-double Line::getLength( void ) {
-   return length;
+double Number::getNumber( void ) {
+   return number;
 }
 
 int main() {
-   Line line; // конструктор створює лінію
-   line.setLength(6.0);
-   cout << "Length of line : " << line.getLength() <<endl;
-   return 0;
+   Number num; // конструктор створює Number
+   num.setNumber(3.0);
+   std::cout << "Number is : " << num.getNumber() <<"\n";
 }
 

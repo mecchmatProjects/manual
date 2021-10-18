@@ -1,33 +1,32 @@
 #include <iostream>
-using namespace std;
-class Line {
+
+class Number {
    public:
-      void setLength( double len );
-      double getLength( void );
-      Line();   // Декларація конструктору
-      ~Line();  // Декларація деструктору
+      void setNumber(float x);
+      float getNumber();
+      Number();   // Декларація конструктору
+      ~Number();  // Декларація деструктору
    private:
-      double length;
+      float number;
 };
  
 // Визначення методів, зокрема конструктору та деструктору
-Line::Line(void) {
-   cout << "Object is being created" << endl;
+Number::Number() {
+   std::clog << "Object is being created\n";
 }
-Line::~Line(void) {
-   cout << "Object is being deleted" << endl;
+Number::~Number() {
+   std::clog << "Object is being deleted\n";
 }
-void Line::setLength( double len ) {
-   length = len;
+void Number::setNumber(float x) {
+   number = x;
 }
-double Line::getLength( void ) {
-   return length;
+float Number::getNumber() {
+   return number;
 }
 
 int main() {
-   Line line;
-   // встановити довжину
-   line.setLength(6.0);
-   cout << "Length of line : " << line.getLength() <<endl;
-   return 0;
+   Number num;
+   // встановити значення числа
+   num.setNumber(42.42f);
+   std::cout << "Number is : " << num.getNumber() <<"\n";
 }
