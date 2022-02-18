@@ -2,7 +2,7 @@
 int main () {
 
 int number=100;
-int* var_int = (int*) &number; 
+int* var_int = &number; 
 char *var_char = (char*) &number;
 short *var_short = (short*) &number;
 float *var_float = (float*) &number;
