@@ -1,0 +1,98 @@
+\babel@toc {ukrainian}{}
+\contentsline {chapter}{\numberline {1} Лінійні програми на C. Введення/виведення. Дійсний тип даних. }{7}{chapter.1}%
+\contentsline {section}{Контрольні запитання:}{7}{section*.3}%
+\contentsline {section}{Завдання для аудиторної роботи:}{7}{section*.4}%
+\contentsline {section}{Завдання для самостійної роботи:}{8}{section*.5}%
+\contentsline {section}{Додаткові задачі:}{10}{section*.6}%
+\contentsline {chapter}{\numberline {2} Використання математичної бібліотеки С. Створення власних функцій }{11}{chapter.2}%
+\contentsline {section}{Контрольні запитання:}{11}{section*.7}%
+\contentsline {section}{Завдання для аудиторної роботи:}{11}{section*.8}%
+\contentsline {section}{Завдання для самостійної роботи:}{12}{section*.9}%
+\contentsline {chapter}{\numberline {3} Цілі типи C. Умовні конструкції.}{14}{chapter.3}%
+\contentsline {section}{Контрольні запитання:}{14}{section*.10}%
+\contentsline {section}{Завдання для аудиторної роботи:}{14}{section*.11}%
+\contentsline {section}{Завдання для самостійної роботи:}{15}{section*.12}%
+\contentsline {chapter}{\numberline {4} Цикли }{18}{chapter.4}%
+\contentsline {section}{Контрольні запитання:}{18}{section*.13}%
+\contentsline {section}{Завдання для аудиторної роботи:}{18}{section*.14}%
+\contentsline {section}{Завдання для самостійної роботи:}{19}{section*.15}%
+\contentsline {section}{Додаткові задачі:}{22}{section*.16}%
+\contentsline {chapter}{\numberline {5}Цикли. Рекурентні співвідношення. Рекурсія }{23}{chapter.5}%
+\contentsline {section}{Контрольні запитання:}{23}{section*.17}%
+\contentsline {section}{Завдання для аудиторної роботи:}{23}{section*.18}%
+\contentsline {section}{Завдання для самостійної роботи:}{25}{section*.19}%
+\contentsline {section}{Додаткові задачі:}{28}{section*.20}%
+\contentsline {chapter}{\numberline {6}Бітові операції }{29}{chapter.6}%
+\contentsline {section}{Контрольні запитання:}{29}{section*.21}%
+\contentsline {section}{Завдання для аудиторної роботи:}{29}{section*.22}%
+\contentsline {section}{Завдання для самостійної роботи:}{30}{section*.23}%
+\contentsline {chapter}{\numberline {7} Статичні масиви. Лінійні масиви }{32}{chapter.7}%
+\contentsline {section}{Контрольні запитання:}{32}{section*.24}%
+\contentsline {section}{Завдання для аудиторної роботи:}{32}{section*.25}%
+\contentsline {section}{Завдання для самостійної роботи:}{33}{section*.26}%
+\contentsline {section}{Додаткові задачі:}{35}{section*.27}%
+\contentsline {chapter}{\numberline {8} Статичні масиви. Багатовимірні масиви }{36}{chapter.8}%
+\contentsline {section}{Контрольні запитання:}{36}{section*.28}%
+\contentsline {section}{Завдання для аудиторної роботи:}{36}{section*.29}%
+\contentsline {section}{Завдання для самостійної роботи:}{37}{section*.30}%
+\contentsline {section}{Додаткові задачі:}{39}{section*.31}%
+\contentsline {chapter}{\numberline {9}Динамічні масиви. Робота з вказівниками }{40}{chapter.9}%
+\contentsline {section}{Контрольні запитання:}{40}{section*.32}%
+\contentsline {section}{Завдання для аудиторної роботи:}{40}{section*.33}%
+\contentsline {section}{Завдання для самостійної роботи:}{41}{section*.34}%
+\contentsline {section}{Додаткові задачі:}{43}{section*.35}%
+\contentsline {chapter}{\numberline {10}Структури. Створення власного типу}{44}{chapter.10}%
+\contentsline {section}{Контрольні запитання:}{44}{section*.36}%
+\contentsline {section}{Завдання для аудиторної роботи:}{44}{section*.37}%
+\contentsline {section}{Завдання для самостійної роботи:}{45}{section*.38}%
+\contentsline {section}{Додаткові задачі:}{47}{section*.39}%
+\contentsline {chapter}{\numberline {11}Робота з бінарними файлами на C}{48}{chapter.11}%
+\contentsline {section}{Контрольні запитання:}{48}{section*.40}%
+\contentsline {section}{Завдання для аудиторної роботи:}{48}{section*.41}%
+\contentsline {section}{Завдання для самостійної роботи:}{49}{section*.42}%
+\contentsline {section}{Додаткові задачі:}{52}{section*.43}%
+\contentsline {chapter}{\numberline {12}Робота з потоками введення/виведення C++.}{54}{chapter.12}%
+\contentsline {section}{Контрольні запитання:}{54}{section*.44}%
+\contentsline {section}{Завдання для аудиторної роботи:}{54}{section*.45}%
+\contentsline {section}{Завдання для самостійної роботи:}{55}{section*.46}%
+\contentsline {section}{Додаткові задачі:}{57}{section*.47}%
+\contentsline {chapter}{\numberline {13}Робота з класом рядок на C++}{59}{chapter.13}%
+\contentsline {section}{Контрольні запитання:}{59}{section*.48}%
+\contentsline {section}{Завдання для аудиторної роботи:}{59}{section*.49}%
+\contentsline {section}{Завдання для самостійної роботи:}{60}{section*.50}%
+\contentsline {section}{Додаткові задачі:}{61}{section*.51}%
+\contentsline {chapter}{\numberline {14}Робота з текстовими файлами}{62}{chapter.14}%
+\contentsline {section}{Контрольні запитання:}{62}{section*.52}%
+\contentsline {section}{Завдання для аудиторної роботи:}{62}{section*.53}%
+\contentsline {section}{Завдання для самостійної роботи:}{62}{section*.54}%
+\contentsline {section}{Додаткові задачі:}{65}{section*.55}%
+\contentsline {chapter}{\numberline {15}Створення власних класів. Інкапсуляція.}{66}{chapter.15}%
+\contentsline {section}{Контрольні запитання:}{66}{section*.56}%
+\contentsline {section}{Завдання для аудиторної роботи:}{66}{section*.57}%
+\contentsline {section}{Завдання для самостійної роботи:}{67}{section*.58}%
+\contentsline {section}{Додаткові задачі:}{70}{section*.59}%
+\contentsline {chapter}{\numberline {16}Робота з класами. Наслідування та поліморфізм.}{71}{chapter.16}%
+\contentsline {section}{Контрольні запитання:}{71}{section*.60}%
+\contentsline {section}{Завдання для аудиторної роботи:}{71}{section*.61}%
+\contentsline {section}{Завдання для самостійної роботи:}{72}{section*.62}%
+\contentsline {chapter}{\numberline {17}Перетворення типів та робота з виключеннями}{77}{chapter.17}%
+\contentsline {section}{Контрольні запитання:}{77}{section*.63}%
+\contentsline {section}{Завдання для аудиторної роботи:}{77}{section*.64}%
+\contentsline {section}{Завдання для самостійної роботи:}{78}{section*.65}%
+\contentsline {chapter}{\numberline {18}Створення шаблонів функцій та шаблонів класів}{81}{chapter.18}%
+\contentsline {section}{Контрольні запитання:}{81}{section*.66}%
+\contentsline {section}{Завдання для аудиторної роботи:}{81}{section*.67}%
+\contentsline {section}{Завдання для самостійної роботи:}{82}{section*.68}%
+\contentsline {chapter}{\numberline {19}Стандартна бібліотека С++. Послідовні контейнери та контейнери-адаптори.}{85}{chapter.19}%
+\contentsline {section}{Контрольні запитання:}{85}{section*.69}%
+\contentsline {section}{Завдання для аудиторної роботи:}{85}{section*.70}%
+\contentsline {section}{Завдання для самостійної роботи:}{86}{section*.71}%
+\contentsline {chapter}{\numberline {20}Стандартна бібліотека С++. Асоціативні контейнери.}{90}{chapter.20}%
+\contentsline {section}{Контрольні запитання:}{90}{section*.72}%
+\contentsline {section}{Завдання для аудиторної роботи:}{90}{section*.73}%
+\contentsline {section}{Завдання для самостійної роботи:}{91}{section*.74}%
+\contentsline {section}{Додаткові задачі:}{94}{section*.75}%
+\contentsline {chapter}{\numberline {21}Стандартна бібліотека С++. Алгоритми та функтори.}{95}{chapter.21}%
+\contentsline {section}{Контрольні запитання:}{95}{section*.76}%
+\contentsline {section}{Завдання для аудиторної роботи:}{95}{section*.77}%
+\contentsline {section}{Завдання для самостійної роботи:}{96}{section*.78}%
